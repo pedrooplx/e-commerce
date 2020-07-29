@@ -37,6 +37,9 @@ namespace E_Commerce
             //Adicionar instancia temporaria
             services.AddTransient<IDataService, DataService>();
             services.AddTransient<IProdutoReposiory, ProdutoReposiory>();
+            services.AddTransient<IPedidoRepository, PedidoRepository>();
+            services.AddTransient<IItemPedidoRepository, ItemPedidoRepository>();
+            services.AddTransient<ICadastroRepository, CadastroRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline. Esse método consome os serviços.

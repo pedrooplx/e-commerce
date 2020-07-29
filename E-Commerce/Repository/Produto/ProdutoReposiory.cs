@@ -6,25 +6,25 @@ using System.Threading.Tasks;
 
 namespace E_Commerce.Repository
 {
-    public class ProdutoReposiory : IProdutoReposiory
+    public class ProdutoReposiory : BaseRepository<Produto>, IProdutoReposiory
     {
-        private readonly ApplicationContext context;
-
-        public ProdutoReposiory(ApplicationContext context)
+        public ProdutoReposiory(ApplicationContext context) : base(context)
         {
-            this.context = context;
         }
 
         public IList<Produto> GetProdutos()
         {
-            return context.Set<Produto>().ToList();
+            return dbSet.ToList();
         }
 
         public void SaveProdutos(List<Tenis> tenis)
         {
             foreach (var item in tenis)
             {
-                context.Set<Produto>().Add(new Produto(item.Codigo, item.Nome, item.Preco));
+                if (!dbSet.Where(p => p.Codigo == item.Codigo).Any())
+                {
+                    dbSet.Add(new Produto(item.Codigo, item.Nome, item.Preco));
+                }
             }
             context.SaveChanges();
         }
