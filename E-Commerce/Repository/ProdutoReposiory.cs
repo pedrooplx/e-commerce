@@ -15,6 +15,11 @@ namespace E_Commerce.Repository
             this.context = context;
         }
 
+        public IList<Produto> GetProdutos()
+        {
+            return context.Set<Produto>().ToList();
+        }
+
         public void SaveProdutos(List<Tenis> tenis)
         {
             foreach (var item in tenis)

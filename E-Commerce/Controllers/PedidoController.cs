@@ -6,27 +6,27 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using E_Commerce.Models;
+using E_Commerce.Repository;
 
 namespace E_Commerce.Controllers
 {
     public class PedidoController : Controller
     {
-        private readonly ILogger<PedidoController> _logger;
+        private readonly IProdutoReposiory produtoReposiory;
 
-        public PedidoController(ILogger<PedidoController> logger)
+        public PedidoController(IProdutoReposiory produtoReposiory)
         {
-            _logger = logger;
+            this.produtoReposiory = produtoReposiory;
         }
-
+        public IActionResult Carrossel()
+        {
+            return View(produtoReposiory.GetProdutos());
+        }
         public IActionResult Cadastro()
         {
             return View();
         }
         public IActionResult Carrinho()
-        {
-            return View();
-        }
-        public IActionResult Carrossel()
         {
             return View();
         }

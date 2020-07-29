@@ -28,7 +28,10 @@ namespace E_Commerce
                 //Lendo arquivo JSON e gravando no banco de dados
                 List<Tenis> tenis = GetTenis();
 
-                produtoReposiory.SaveProdutos(tenis);
+                if (produtoReposiory.GetProdutos().Count == 0)
+                {
+                    produtoReposiory.SaveProdutos(tenis);
+                }
             }
 
             private static List<Tenis> GetTenis()
