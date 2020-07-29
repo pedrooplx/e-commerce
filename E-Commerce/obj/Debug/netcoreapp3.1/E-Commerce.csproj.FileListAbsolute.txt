@@ -19,8 +19,6 @@ D:\Documentos\GitHub\E-Commerce\E-Commerce\obj\Debug\netcoreapp3.1\E-Commerce.Ra
 D:\Documentos\GitHub\E-Commerce\E-Commerce\obj\Debug\netcoreapp3.1\E-Commerce.TagHelpers.input.cache
 D:\Documentos\GitHub\E-Commerce\E-Commerce\obj\Debug\netcoreapp3.1\E-Commerce.TagHelpers.output.cache
 D:\Documentos\GitHub\E-Commerce\E-Commerce\obj\Debug\netcoreapp3.1\E-Commerce.RazorCoreGenerate.cache
-D:\Documentos\GitHub\E-Commerce\E-Commerce\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
-D:\Documentos\GitHub\E-Commerce\E-Commerce\obj\Debug\netcoreapp3.1\Razor\Views\Home\Privacy.cshtml.g.cs
 D:\Documentos\GitHub\E-Commerce\E-Commerce\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs
 D:\Documentos\GitHub\E-Commerce\E-Commerce\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
 D:\Documentos\GitHub\E-Commerce\E-Commerce\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
