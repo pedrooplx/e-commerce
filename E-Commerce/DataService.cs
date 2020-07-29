@@ -1,4 +1,10 @@
-﻿namespace E_Commerce
+﻿using E_Commerce.Models;
+using Newtonsoft.Json;
+using System.Collections.Generic;
+using System.IO;
+using System.Text.Json.Serialization;
+
+namespace E_Commerce
 {
     public partial class Startup
     {
@@ -15,7 +21,24 @@
             public void InicializaDB()
             {
                 context.Database.EnsureCreated();
+
+                //Lendo arquivo JSON e gravando no banco de dados
+                var json = File.ReadAllText("tenis.json");
+                var tenis = JsonConvert.DeserializeObject<List<Tenis>>(json);
+
+                foreach (var item in tenis)
+                {
+                    context.Set<Produto>().Add(new Produto(item.Codigo, item.Nome, item.Preco));
+                }
+                context.SaveChanges();
             }
+        }
+
+        class Tenis
+        {
+            public string Codigo { get; set; }
+            public string Nome { get; set; }
+            public decimal Preco { get; set; }
         }
     }
 }

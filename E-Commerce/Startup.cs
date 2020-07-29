@@ -65,7 +65,7 @@ namespace E_Commerce
             });
 
             // Linha de código para garantir que o banco de dados tenha sido criado
-            serviceProvider.GetService<DataService>().InicializaDB();
+            serviceProvider.GetService<IDataService>().InicializaDB();
         }
     }
 }

@@ -6,8 +6,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Remove="wwwroot\dados\modelo.cs" />
-    <Content Remove="wwwroot\dados\modelo.png" />
     <Content Remove="wwwroot\images\logo.png" />
     <Content Remove="wwwroot\images\produtos\large_001.jpg" />
     <Content Remove="wwwroot\images\produtos\large_002.jpg" />
@@ -78,11 +76,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Include="wwwroot\dados\modelo.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="wwwroot\dados\modelo.png" />
     <None Include="wwwroot\images\logo.png" />
     <None Include="wwwroot\images\produtos\large_001.jpg" />
     <None Include="wwwroot\images\produtos\large_002.jpg" />
@@ -159,15 +152,13 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
   </ItemGroup>
 
   <ItemGroup>
     <Content Update="Views\Shared\_Layout.cshtml">
       <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
-    <Content Update="wwwroot\dados\livros.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
 

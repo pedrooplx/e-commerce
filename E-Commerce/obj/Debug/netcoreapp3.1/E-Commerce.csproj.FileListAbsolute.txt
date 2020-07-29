@@ -35,7 +35,6 @@ D:\Documentos\GitHub\E-Commerce\E-Commerce\obj\Debug\netcoreapp3.1\Razor\Views\P
 D:\Documentos\GitHub\E-Commerce\E-Commerce\obj\Debug\netcoreapp3.1\Razor\Views\Pedido\Carrinho.cshtml.g.cs
 D:\Documentos\GitHub\E-Commerce\E-Commerce\obj\Debug\netcoreapp3.1\Razor\Views\Pedido\Carrossel.cshtml.g.cs
 D:\Documentos\GitHub\E-Commerce\E-Commerce\obj\Debug\netcoreapp3.1\Razor\Views\Pedido\Resumo.cshtml.g.cs
-D:\Documentos\GitHub\E-Commerce\E-Commerce\bin\Debug\netcoreapp3.1\wwwroot\dados\livros.json
 D:\Documentos\GitHub\E-Commerce\E-Commerce\bin\Debug\netcoreapp3.1\Microsoft.Bcl.AsyncInterfaces.dll
 D:\Documentos\GitHub\E-Commerce\E-Commerce\bin\Debug\netcoreapp3.1\Microsoft.Bcl.HashCode.dll
 D:\Documentos\GitHub\E-Commerce\E-Commerce\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.dll
@@ -69,5 +68,7 @@ D:\Documentos\GitHub\E-Commerce\E-Commerce\bin\Debug\netcoreapp3.1\runtimes\unix
 D:\Documentos\GitHub\E-Commerce\E-Commerce\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
 D:\Documentos\GitHub\E-Commerce\E-Commerce\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 D:\Documentos\GitHub\E-Commerce\E-Commerce\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
+D:\Documentos\GitHub\E-Commerce\E-Commerce\bin\Debug\netcoreapp3.1\tenis.json
+D:\Documentos\GitHub\E-Commerce\E-Commerce\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
 D:\Documentos\GitHub\E-Commerce\E-Commerce\obj\Debug\netcoreapp3.1\E-Commerce.csproj.CoreCompileInputs.cache
 D:\Documentos\GitHub\E-Commerce\E-Commerce\obj\Debug\netcoreapp3.1\E-Commerce.MvcApplicationPartsAssemblyInfo.cache

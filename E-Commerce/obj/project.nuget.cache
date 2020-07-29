@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "2P4iZKR1IYCZA6n0UQBNPwQVzlBHcQErapyQZ9hlPIZIvFiy3lSbtgsRC8BeZ42sQRMPBbvKsvHYHOdvrjzE1A==",
+  "dgSpecHash": "IvPghSR3PiYxQUCeHdvPRqNLQV2SW+dql9vEvw1OmQ1XfuUo5IMxsvpNS2eFpHzy8018A3gJTb8Z69gz5HQcIg==",
   "success": true,
   "projectFilePath": "D:\\Documentos\\GitHub\\E-Commerce\\E-Commerce\\E-Commerce.csproj",
   "expectedPackageFiles": [
@@ -30,6 +30,7 @@
     "C:\\Users\\PHS\\.nuget\\packages\\microsoft.netcore.platforms\\2.0.0\\microsoft.netcore.platforms.2.0.0.nupkg.sha512",
     "C:\\Users\\PHS\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
     "C:\\Users\\PHS\\.nuget\\packages\\microsoft.win32.registry\\4.5.0\\microsoft.win32.registry.4.5.0.nupkg.sha512",
+    "C:\\Users\\PHS\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
     "C:\\Users\\PHS\\.nuget\\packages\\runtime.native.system\\4.3.0\\runtime.native.system.4.3.0.nupkg.sha512",
     "C:\\Users\\PHS\\.nuget\\packages\\runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
     "C:\\Users\\PHS\\.nuget\\packages\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
