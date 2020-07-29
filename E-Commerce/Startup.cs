@@ -12,7 +12,7 @@ using Microsoft.Extensions.Hosting;
 
 namespace E_Commerce
 {
-    public class Startup
+    public partial class Startup
     {
         public Startup(IConfiguration configuration)
         {
@@ -32,6 +32,9 @@ namespace E_Commerce
             {
                 t.UseSqlServer(connectionString);
             });
+
+            //Adicionar instancia temporaria
+            services.AddTransient<IDataService, DataService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline. Esse método consome os serviços.
@@ -62,7 +65,7 @@ namespace E_Commerce
             });
 
             // Linha de código para garantir que o banco de dados tenha sido criado
-            serviceProvider.GetService<ApplicationContext>().Database.Migrate();
+            serviceProvider.GetService<DataService>().InicializaDB();
         }
     }
 }
