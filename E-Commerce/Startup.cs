@@ -66,7 +66,7 @@ namespace E_Commerce
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Pedido}/{action=Carrossel}/{id?}");
+                    pattern: "{controller=Pedido}/{action=Carrossel}/{codigo?}");
             });
 
             // Linha de código para garantir que o banco de dados tenha sido criado

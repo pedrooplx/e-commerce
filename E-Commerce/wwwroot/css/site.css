@@ -45,8 +45,10 @@ textarea {
 
 .navbar-brand {
     background: url('../images/logo.png');
-    width: 215px;
+    width: 185px;
     height: 55px;
+    padding: 30px;
+    margin-top: 5px;
 }
 
 .navbar-inverse {
