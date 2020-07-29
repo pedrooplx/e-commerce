@@ -26,6 +26,8 @@ namespace E_Commerce
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+            services.AddDistributedMemoryCache();
+            services.AddSession();
 
             string connectionString = Configuration.GetConnectionString("Default");
 
@@ -57,6 +59,8 @@ namespace E_Commerce
             }
             app.UseHttpsRedirection();
             app.UseStaticFiles();
+
+            app.UseSession();
 
             app.UseRouting();
 
