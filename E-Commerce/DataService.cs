@@ -1,4 +1,5 @@
 ﻿using E_Commerce.Models;
+using E_Commerce.Repository;
 using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.IO;
@@ -12,10 +13,12 @@ namespace E_Commerce
         class DataService : IDataService
         {
             private readonly ApplicationContext context;
+            private readonly IProdutoReposiory produtoReposiory;
 
-            public DataService(ApplicationContext context)
+            public DataService(ApplicationContext context, IProdutoReposiory produtoReposiory)
             {
                 this.context = context;
+                this.produtoReposiory = produtoReposiory;
             }
 
             public void InicializaDB()
@@ -23,22 +26,17 @@ namespace E_Commerce
                 context.Database.EnsureCreated();
 
                 //Lendo arquivo JSON e gravando no banco de dados
+                List<Tenis> tenis = GetTenis();
+
+                produtoReposiory.SaveProdutos(tenis);
+            }
+
+            private static List<Tenis> GetTenis()
+            {
                 var json = File.ReadAllText("tenis.json");
                 var tenis = JsonConvert.DeserializeObject<List<Tenis>>(json);
-
-                foreach (var item in tenis)
-                {
-                    context.Set<Produto>().Add(new Produto(item.Codigo, item.Nome, item.Preco));
-                }
-                context.SaveChanges();
+                return tenis;
             }
-        }
-
-        class Tenis
-        {
-            public string Codigo { get; set; }
-            public string Nome { get; set; }
-            public decimal Preco { get; set; }
         }
     }
 }

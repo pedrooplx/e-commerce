@@ -50,8 +50,9 @@ textarea {
 }
 
 .navbar-inverse {
-    background-color: #f8965d;
+    background-color: #fff;
     border-color: white;
+    border-bottom: 1px solid black;
 }
 
 .row-center {

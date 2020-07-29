@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using E_Commerce.Repository;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -35,6 +36,7 @@ namespace E_Commerce
 
             //Adicionar instancia temporaria
             services.AddTransient<IDataService, DataService>();
+            services.AddTransient<IProdutoReposiory, ProdutoReposiory>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline. Esse método consome os serviços.
