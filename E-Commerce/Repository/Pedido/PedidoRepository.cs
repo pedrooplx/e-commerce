@@ -5,10 +5,6 @@ using System.Threading.Tasks;
 
 namespace E_Commerce.Repository
 {
-    public interface IPedidoRepository
-    {
-
-    }
     public class PedidoRepository : BaseRepository<Models.Pedido>, IPedidoRepository
     {
         public PedidoRepository(ApplicationContext context) : base(context)

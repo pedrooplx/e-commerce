@@ -21,6 +21,7 @@ namespace E_Commerce.Repository
         {
             foreach (var item in tenis)
             {
+                //Condição para adicionar apenas os itens que não foram adicionados
                 if (!dbSet.Where(p => p.Codigo == item.Codigo).Any())
                 {
                     dbSet.Add(new Produto(item.Codigo, item.Nome, item.Preco));
