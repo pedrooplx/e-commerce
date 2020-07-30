@@ -40,7 +40,8 @@ namespace E_Commerce.Controllers
         }
         public IActionResult Resumo()
         {
-            return View();
+            Pedido pedido = pedidoRepository.GetPedido();
+            return View(pedido);
         }
     }
 }
