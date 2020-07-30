@@ -26,16 +26,16 @@ namespace E_Commerce
                 context.Database.EnsureCreated();
 
                 //Lendo arquivo JSON e gravando no banco de dados
-                List<Tenis> tenis = GetTenis();
+                List<Livro> livros = GetLivros();
 
-                produtoReposiory.SaveProdutos(tenis);
+                produtoReposiory.SaveProdutos(livros);
             }
 
-            private static List<Tenis> GetTenis()
+            private static List<Livro> GetLivros()
             {
-                var json = File.ReadAllText("tenis.json");
-                var tenis = JsonConvert.DeserializeObject<List<Tenis>>(json);
-                return tenis;
+                var json = File.ReadAllText("livros.json");
+                var livros = JsonConvert.DeserializeObject<List<Livro>>(json);
+                return livros;
             }
         }
     }

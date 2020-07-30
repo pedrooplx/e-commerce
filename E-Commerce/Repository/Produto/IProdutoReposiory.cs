@@ -5,7 +5,7 @@ namespace E_Commerce.Repository
 {
     public interface IProdutoReposiory
     {
-        void SaveProdutos(List<Tenis> tenis);
+        void SaveProdutos(List<Livro> livros);
         IList<Produto> GetProdutos();
     }
 }
