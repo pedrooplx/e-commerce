@@ -1,5 +1,6 @@
 ﻿using E_Commerce.Models;
 using Microsoft.AspNetCore.Http;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -42,6 +43,8 @@ namespace E_Commerce.Repository
             var pedidoId = GetPedidoId();
             //p.Id deve ser igual ao pedidoId da sessão 
             var pedido = dbSet
+                .Include(p => p.Itens)
+                .ThenInclude(i => i.Produto)
                 .Where(p => p.Id == pedidoId)
                 .SingleOrDefault();
 
