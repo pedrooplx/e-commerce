@@ -9,8 +9,20 @@ namespace E_Commerce.Repository
 {
     public class PedidoRepository : BaseRepository<Pedido>, IPedidoRepository
     {
-        public PedidoRepository(ApplicationContext context) : base(context)
+        private readonly IHttpContextAccessor contextAccessor;
+        public PedidoRepository(ApplicationContext context, IHttpContextAccessor contextAccessor) : base(context)
         {
+            this.contextAccessor = contextAccessor;
+        }
+
+        private int? GetPedidoId()
+        {
+            return contextAccessor.HttpContext.Session.GetInt32("codigoPedido");
+        }
+
+        private void SetPedidoId(int codigoPedido)
+        {
+            contextAccessor.HttpContext.Session.SetInt32("codigoPedido", codigoPedido);
         }
     }
 }

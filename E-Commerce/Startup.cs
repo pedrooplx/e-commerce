@@ -26,8 +26,13 @@ namespace E_Commerce
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+
+            //Métodos para adicionar sessão e cache para a sessão
             services.AddDistributedMemoryCache();
             services.AddSession();
+
+            //Add ContentAccessor
+            services.AddHttpContextAccessor();
 
             string connectionString = Configuration.GetConnectionString("Default");
 
@@ -60,6 +65,7 @@ namespace E_Commerce
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 
+            //Usar sessão
             app.UseSession();
 
             app.UseRouting();
