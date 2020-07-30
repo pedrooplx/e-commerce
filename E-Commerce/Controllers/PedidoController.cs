@@ -24,14 +24,19 @@ namespace E_Commerce.Controllers
         {
             return View(produtoReposiory.GetProdutos());
         }
+        public IActionResult Carrinho(string codigo)
+        {
+            if (!string.IsNullOrEmpty(codigo))
+            {
+                pedidoRepository.AddItem(codigo);
+            }
+
+            Pedido pedido = pedidoRepository.GetPedido();
+            return View(pedido.Itens);
+        }
         public IActionResult Cadastro()
         {
             return View();
-        }
-        public IActionResult Carrinho(string codigo)
-        {
-            Pedido pedido = pedidoRepository.GetPedido();
-            return View(pedido.Itens);
         }
         public IActionResult Resumo()
         {
