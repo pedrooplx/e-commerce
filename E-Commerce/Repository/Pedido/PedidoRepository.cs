@@ -15,14 +15,33 @@ namespace E_Commerce.Repository
             this.contextAccessor = contextAccessor;
         }
 
-        private int? GetPedidoId()
+        //Método para salvar o pedido no banco pegando o pedidoId da sessão
+        public Pedido GetPedido() 
         {
-            return contextAccessor.HttpContext.Session.GetInt32("codigoPedido");
+            var pedidoId = GetPedidoId();
+            //p.Id deve ser igual ao pedidoId da sessão 
+            var pedido = dbSet
+                .Where(p => p.Id == pedidoId)
+                .SingleOrDefault();
+
+            if(pedido == null)
+            {
+                pedido = new Pedido();
+                dbSet.Add(pedido);
+                context.SaveChanges();
+            }
+
+            return pedido;
         }
 
-        private void SetPedidoId(int codigoPedido)
+        private int? GetPedidoId()
         {
-            contextAccessor.HttpContext.Session.SetInt32("codigoPedido", codigoPedido);
+            return contextAccessor.HttpContext.Session.GetInt32("pedidoId");
+        }
+
+        private void SetPedidoId(int pedidoId)
+        {
+            contextAccessor.HttpContext.Session.SetInt32("pedidoId", pedidoId);
         }
     }
 }

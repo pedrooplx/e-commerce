@@ -13,10 +13,12 @@ namespace E_Commerce.Controllers
     public class PedidoController : Controller
     {
         private readonly IProdutoReposiory produtoReposiory;
+        private readonly IPedidoRepository pedidoRepository;
 
-        public PedidoController(IProdutoReposiory produtoReposiory)
+        public PedidoController(IProdutoReposiory produtoReposiory, IPedidoRepository pedidoRepository) /*Passando repositórios via injeção de dependência*/
         {
             this.produtoReposiory = produtoReposiory;
+            this.pedidoRepository = pedidoRepository;
         }
         public IActionResult Carrossel()
         {
@@ -28,7 +30,8 @@ namespace E_Commerce.Controllers
         }
         public IActionResult Carrinho(string codigo)
         {
-            return View();
+            Pedido pedido = pedidoRepository.GetPedido();
+            return View(pedido.Itens);
         }
         public IActionResult Resumo()
         {

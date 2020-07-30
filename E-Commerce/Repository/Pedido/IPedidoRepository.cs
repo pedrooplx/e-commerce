@@ -1,6 +1,10 @@
-﻿namespace E_Commerce.Repository
+﻿using E_Commerce.Models;
+using System.Collections.Generic;
+
+namespace E_Commerce.Repository
 {
-    internal interface IPedidoRepository
+    public interface IPedidoRepository
     {
+        Pedido GetPedido();
     }
 }
