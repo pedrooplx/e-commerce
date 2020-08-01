@@ -87,9 +87,13 @@ namespace E_Commerce.Models
             PrecoUnitario = precoUnitario;
         }
 
-        public void AtualizaQuantidade(int id, int quantidade)
+        public void AttrDados(int id, int quantidade)
         {
             Id = id;
+            Quantidade = quantidade;
+        }
+        public void AtualizaQuantidade(int quantidade)
+        {
             Quantidade = quantidade;
         }
     }

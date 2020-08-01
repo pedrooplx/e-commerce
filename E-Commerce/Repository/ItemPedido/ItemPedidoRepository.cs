@@ -18,6 +18,7 @@ namespace E_Commerce.Repository
 
             if(itemDB != null)
             {
+                itemDB.AtualizaQuantidade(itemPedido.Quantidade);
                 context.SaveChanges();
             }
         }

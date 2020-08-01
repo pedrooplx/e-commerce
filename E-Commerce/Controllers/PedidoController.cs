@@ -56,7 +56,7 @@ namespace E_Commerce.Controllers
             var item = Regex.Replace(serialize, "[^0-9,]+", "").Split(',');
 
             ItemPedido itemPedido = new ItemPedido();
-            itemPedido.AtualizaQuantidade(int.Parse(item[0]), int.Parse(item[1]));
+            itemPedido.AttrDados(int.Parse(item[0]), int.Parse(item[1]));
 
             itemPedidoRepository.UpdateQuantidade(itemPedido);
         }
