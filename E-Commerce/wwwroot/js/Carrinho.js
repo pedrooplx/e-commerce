@@ -13,6 +13,11 @@
         this.postData(data);
     }
 
+    updateQuantidade(input) {
+        let data = this.getData(input);
+        this.postData(data);
+    }
+
     getData(elemento) {
         var linhaItem = $(elemento).parents('[item-id]'); //Capturar o elemento que tem "item-id"
         var itemId = $(linhaItem).attr('item-id'); //Acessando atributo item-id dentro de linhaItem
