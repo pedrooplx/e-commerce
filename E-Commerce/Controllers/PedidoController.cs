@@ -17,11 +17,13 @@ namespace E_Commerce.Controllers
     {
         private readonly IProdutoReposiory produtoReposiory;
         private readonly IPedidoRepository pedidoRepository;
+        private readonly IItemPedidoRepository itemPedidoRepository;
 
-        public PedidoController(IProdutoReposiory produtoReposiory, IPedidoRepository pedidoRepository) /*Passando repositórios via injeção de dependência*/
+        public PedidoController(IProdutoReposiory produtoReposiory, IPedidoRepository pedidoRepository, IItemPedidoRepository itemPedidoRepository) /*Passando repositórios via injeção de dependência*/
         {
             this.produtoReposiory = produtoReposiory;
             this.pedidoRepository = pedidoRepository;
+            this.itemPedidoRepository = itemPedidoRepository;
         }
         public IActionResult Carrossel()
         {
@@ -53,11 +55,10 @@ namespace E_Commerce.Controllers
             string serialize = JsonSerializer.Serialize(model);
             var item = Regex.Replace(serialize, "[^0-9,]+", "").Split(',');
 
-            ItemPedido itemPedido = new ItemPedido()
-            {
-                Id = int.Parse(item[0]),
-                Quantidade = int.Parse(item[1])
-            };
+            ItemPedido itemPedido = new ItemPedido();
+            itemPedido.AtualizaQuantidade(int.Parse(item[0]), int.Parse(item[1]));
+
+            itemPedidoRepository.UpdateQuantidade(itemPedido);
         }
     }
 }

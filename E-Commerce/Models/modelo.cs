@@ -11,7 +11,7 @@ namespace E_Commerce.Models
     public class BaseModel
     {
         [DataMember]
-        public int Id { get; set; }
+        public int Id { get; protected set; }
     }
 
     public class Produto : BaseModel
@@ -70,7 +70,7 @@ namespace E_Commerce.Models
         [Required]
         public Produto Produto { get; private set; }
         [Required]
-        public int Quantidade { get; set; }
+        public int Quantidade { get; private set; }
         [Required]
         public decimal PrecoUnitario { get; private set; }
 
@@ -85,6 +85,12 @@ namespace E_Commerce.Models
             Produto = produto;
             Quantidade = quantidade;
             PrecoUnitario = precoUnitario;
+        }
+
+        public void AtualizaQuantidade(int id, int quantidade)
+        {
+            Id = id;
+            Quantidade = quantidade;
         }
     }
 

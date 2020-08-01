@@ -1,6 +1,9 @@
-﻿namespace E_Commerce.Repository
+﻿using E_Commerce.Models;
+
+namespace E_Commerce.Repository
 {
-    internal interface IItemPedidoRepository
+    public interface IItemPedidoRepository
     {
+        void UpdateQuantidade(ItemPedido itemPedido);
     }
 }
