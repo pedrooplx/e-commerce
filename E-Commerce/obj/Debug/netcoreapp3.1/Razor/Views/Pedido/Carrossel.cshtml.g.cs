@@ -26,8 +26,15 @@ using E_Commerce.Models;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 3 "D:\Documentos\GitHub\E-Commerce\E-Commerce\Views\_ViewImports.cshtml"
+using E_Commerce.Models.ViewModels;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"ab28b4854817e9834d011d02e52a4c616e417ad4", @"/Views/Pedido/Carrossel.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"0f015392c42bf201d3f4fa8f785de821ea8cb926", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"6dde956d118546a61cbc3cd678ba475787f491f2", @"/Views/_ViewImports.cshtml")]
     public class Views_Pedido_Carrossel : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<List<Produto>>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("asp-action", "Carrinho", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -146,7 +153,7 @@ WriteAttributeValue("", 1067, produto.Codigo, 1067, 17, false);
 #line hidden
 #nullable disable
             WriteLiteral("</strong></h4></div>\r\n                                    <div class=\"text-center\">\r\n                                        ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ab28b4854817e9834d011d02e52a4c616e417ad47484", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ab28b4854817e9834d011d02e52a4c616e417ad47670", async() => {
                 WriteLiteral("Adicionar");
             }
             );

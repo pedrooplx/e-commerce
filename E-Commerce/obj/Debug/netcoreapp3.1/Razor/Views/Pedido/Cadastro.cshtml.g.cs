@@ -26,8 +26,15 @@ using E_Commerce.Models;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 3 "D:\Documentos\GitHub\E-Commerce\E-Commerce\Views\_ViewImports.cshtml"
+using E_Commerce.Models.ViewModels;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"dbdf94bf374fe644eb59a30cdda4913cd73023b4", @"/Views/Pedido/Cadastro.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"0f015392c42bf201d3f4fa8f785de821ea8cb926", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"6dde956d118546a61cbc3cd678ba475787f491f2", @"/Views/_ViewImports.cshtml")]
     public class Views_Pedido_Cadastro : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("value", "", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -136,7 +143,7 @@ using E_Commerce.Models;
                 <label class=""control-label"" for=""UF"">UF</label>
                 <select class=""form-control single-select"" name=""UF"">
                     ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "dbdf94bf374fe644eb59a30cdda4913cd73023b414423", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "dbdf94bf374fe644eb59a30cdda4913cd73023b414609", async() => {
                 WriteLiteral("[Selecione o estado]");
             }
             );
@@ -155,7 +162,7 @@ using E_Commerce.Models;
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n                    ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "dbdf94bf374fe644eb59a30cdda4913cd73023b415928", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "dbdf94bf374fe644eb59a30cdda4913cd73023b416114", async() => {
                 WriteLiteral("Acre");
             }
             );
@@ -171,7 +178,7 @@ using E_Commerce.Models;
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n                    ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "dbdf94bf374fe644eb59a30cdda4913cd73023b417106", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "dbdf94bf374fe644eb59a30cdda4913cd73023b417292", async() => {
                 WriteLiteral("Alagoas");
             }
             );
@@ -187,7 +194,7 @@ using E_Commerce.Models;
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n                    ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "dbdf94bf374fe644eb59a30cdda4913cd73023b418287", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "dbdf94bf374fe644eb59a30cdda4913cd73023b418473", async() => {
                 WriteLiteral("Amapá");
             }
             );
@@ -203,7 +210,7 @@ using E_Commerce.Models;
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n                    ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "dbdf94bf374fe644eb59a30cdda4913cd73023b419466", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "dbdf94bf374fe644eb59a30cdda4913cd73023b419652", async() => {
                 WriteLiteral("Amazonas");
             }
             );
@@ -219,7 +226,7 @@ using E_Commerce.Models;
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n                    ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "dbdf94bf374fe644eb59a30cdda4913cd73023b420648", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "dbdf94bf374fe644eb59a30cdda4913cd73023b420834", async() => {
                 WriteLiteral("Bahia");
             }
             );
@@ -235,7 +242,7 @@ using E_Commerce.Models;
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n                    ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "dbdf94bf374fe644eb59a30cdda4913cd73023b421827", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "dbdf94bf374fe644eb59a30cdda4913cd73023b422013", async() => {
                 WriteLiteral("Ceará");
             }
             );
@@ -251,7 +258,7 @@ using E_Commerce.Models;
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n                    ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "dbdf94bf374fe644eb59a30cdda4913cd73023b423006", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "dbdf94bf374fe644eb59a30cdda4913cd73023b423192", async() => {
                 WriteLiteral("Distrito Federal");
             }
             );
@@ -267,7 +274,7 @@ using E_Commerce.Models;
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n                    ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "dbdf94bf374fe644eb59a30cdda4913cd73023b424196", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "dbdf94bf374fe644eb59a30cdda4913cd73023b424382", async() => {
                 WriteLiteral("Espírito Santo");
             }
             );
@@ -283,7 +290,7 @@ using E_Commerce.Models;
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n                    ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "dbdf94bf374fe644eb59a30cdda4913cd73023b425384", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "dbdf94bf374fe644eb59a30cdda4913cd73023b425570", async() => {
                 WriteLiteral("Goiás");
             }
             );
@@ -299,7 +306,7 @@ using E_Commerce.Models;
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n                    ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "dbdf94bf374fe644eb59a30cdda4913cd73023b426563", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "dbdf94bf374fe644eb59a30cdda4913cd73023b426749", async() => {
                 WriteLiteral("Maranhão");
             }
             );
@@ -315,7 +322,7 @@ using E_Commerce.Models;
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n                    ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "dbdf94bf374fe644eb59a30cdda4913cd73023b427747", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "dbdf94bf374fe644eb59a30cdda4913cd73023b427933", async() => {
                 WriteLiteral("Mato Grosso");
             }
             );
@@ -331,7 +338,7 @@ using E_Commerce.Models;
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n                    ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "dbdf94bf374fe644eb59a30cdda4913cd73023b428934", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "dbdf94bf374fe644eb59a30cdda4913cd73023b429120", async() => {
                 WriteLiteral("Mato Grosso do Sul");
             }
             );
@@ -347,7 +354,7 @@ using E_Commerce.Models;
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n                    ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "dbdf94bf374fe644eb59a30cdda4913cd73023b430128", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "dbdf94bf374fe644eb59a30cdda4913cd73023b430314", async() => {
                 WriteLiteral("Minas Gerais");
             }
             );
@@ -363,7 +370,7 @@ using E_Commerce.Models;
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n                    ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "dbdf94bf374fe644eb59a30cdda4913cd73023b431316", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "dbdf94bf374fe644eb59a30cdda4913cd73023b431502", async() => {
                 WriteLiteral("Pará");
             }
             );
@@ -379,7 +386,7 @@ using E_Commerce.Models;
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n                    ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "dbdf94bf374fe644eb59a30cdda4913cd73023b432496", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "dbdf94bf374fe644eb59a30cdda4913cd73023b432682", async() => {
                 WriteLiteral("Paraíba");
             }
             );
@@ -395,7 +402,7 @@ using E_Commerce.Models;
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n                    ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "dbdf94bf374fe644eb59a30cdda4913cd73023b433679", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "dbdf94bf374fe644eb59a30cdda4913cd73023b433865", async() => {
                 WriteLiteral("Paraná");
             }
             );
@@ -411,7 +418,7 @@ using E_Commerce.Models;
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n                    ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "dbdf94bf374fe644eb59a30cdda4913cd73023b434861", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "dbdf94bf374fe644eb59a30cdda4913cd73023b435047", async() => {
                 WriteLiteral("Pernambuco");
             }
             );
@@ -427,7 +434,7 @@ using E_Commerce.Models;
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n                    ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "dbdf94bf374fe644eb59a30cdda4913cd73023b436047", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "dbdf94bf374fe644eb59a30cdda4913cd73023b436233", async() => {
                 WriteLiteral("Piauí");
             }
             );
@@ -443,7 +450,7 @@ using E_Commerce.Models;
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n                    ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "dbdf94bf374fe644eb59a30cdda4913cd73023b437228", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "dbdf94bf374fe644eb59a30cdda4913cd73023b437414", async() => {
                 WriteLiteral("Rio de Janeiro");
             }
             );
@@ -459,7 +466,7 @@ using E_Commerce.Models;
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n                    ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "dbdf94bf374fe644eb59a30cdda4913cd73023b438418", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "dbdf94bf374fe644eb59a30cdda4913cd73023b438604", async() => {
                 WriteLiteral("Rio Grande do Norte");
             }
             );
@@ -475,7 +482,7 @@ using E_Commerce.Models;
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n                    ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "dbdf94bf374fe644eb59a30cdda4913cd73023b439613", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "dbdf94bf374fe644eb59a30cdda4913cd73023b439799", async() => {
                 WriteLiteral("Rio Grande do Sul");
             }
             );
@@ -491,7 +498,7 @@ using E_Commerce.Models;
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n                    ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "dbdf94bf374fe644eb59a30cdda4913cd73023b440806", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "dbdf94bf374fe644eb59a30cdda4913cd73023b440992", async() => {
                 WriteLiteral("Rondônia");
             }
             );
@@ -507,7 +514,7 @@ using E_Commerce.Models;
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n                    ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "dbdf94bf374fe644eb59a30cdda4913cd73023b441990", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "dbdf94bf374fe644eb59a30cdda4913cd73023b442176", async() => {
                 WriteLiteral("Roraima");
             }
             );
@@ -523,7 +530,7 @@ using E_Commerce.Models;
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n                    ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "dbdf94bf374fe644eb59a30cdda4913cd73023b443173", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "dbdf94bf374fe644eb59a30cdda4913cd73023b443359", async() => {
                 WriteLiteral("Santa Catarina");
             }
             );
@@ -539,7 +546,7 @@ using E_Commerce.Models;
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n                    ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "dbdf94bf374fe644eb59a30cdda4913cd73023b444363", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "dbdf94bf374fe644eb59a30cdda4913cd73023b444549", async() => {
                 WriteLiteral("São Paulo");
             }
             );
@@ -555,7 +562,7 @@ using E_Commerce.Models;
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n                    ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "dbdf94bf374fe644eb59a30cdda4913cd73023b445548", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "dbdf94bf374fe644eb59a30cdda4913cd73023b445734", async() => {
                 WriteLiteral("Sergipe");
             }
             );
@@ -571,7 +578,7 @@ using E_Commerce.Models;
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n                    ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "dbdf94bf374fe644eb59a30cdda4913cd73023b446731", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "dbdf94bf374fe644eb59a30cdda4913cd73023b446917", async() => {
                 WriteLiteral("Tocantins");
             }
             );
@@ -596,7 +603,7 @@ using E_Commerce.Models;
 
             <div class=""form-group"">
                 ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "dbdf94bf374fe644eb59a30cdda4913cd73023b448225", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "dbdf94bf374fe644eb59a30cdda4913cd73023b448411", async() => {
                 WriteLiteral("\r\n                    Continuar Comprando\r\n                ");
             }
             );

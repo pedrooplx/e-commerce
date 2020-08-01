@@ -10,6 +10,7 @@ using E_Commerce.Repository;
 using Newtonsoft.Json.Linq;
 using System.Text.Json;
 using System.Text.RegularExpressions;
+using E_Commerce.Models.ViewModels;
 
 namespace E_Commerce.Controllers
 {
@@ -36,8 +37,9 @@ namespace E_Commerce.Controllers
                 pedidoRepository.AddItem(codigo);
             }
 
-            Pedido pedido = pedidoRepository.GetPedido();
-            return View(pedido.Itens);
+            List<ItemPedido> itens = pedidoRepository.GetPedido().Itens;
+            CarrinhoViewModel carrinhoViewModel = new CarrinhoViewModel(itens);
+            return base.View(carrinhoViewModel);
         }
         public IActionResult Cadastro()
         {
