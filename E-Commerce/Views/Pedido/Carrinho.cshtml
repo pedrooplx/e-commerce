@@ -96,6 +96,19 @@
             var linhaItem = $(btn).parents('[item-id]'); //Capturar o elemento que tem "item-id"
             var itemId = $(linhaItem).attr('item-id'); //Acessando atributo item-id dentro de linhaItem
             var novaQtde = $(linhaItem).find('input').val();
+
+            var model = {
+                Id: itemId,
+                Quantidade: novaQtde
+            };
+
+            $.ajax({
+                url: '/pedido/updatequantidade',
+                method: 'POST',
+                contentType: 'application/json',
+                data: JSON.stringify(model)
+            })
+
             debugger;
         }
     </script>
