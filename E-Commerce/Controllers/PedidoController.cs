@@ -52,7 +52,7 @@ namespace E_Commerce.Controllers
         }
 
         [HttpPost]
-        public void UpdateQuantidade([FromBody] object model) //FromBody serve para haver a possibilidade de enviar os dados da View para o Controller
+        public UpdateQuantidadeResponse UpdateQuantidade([FromBody] object model) //FromBody serve para haver a possibilidade de enviar os dados da View para o Controller
         {
             string serialize = JsonSerializer.Serialize(model);
             var item = Regex.Replace(serialize, "[^0-9,]+", "").Split(',');
@@ -60,7 +60,7 @@ namespace E_Commerce.Controllers
             ItemPedido itemPedido = new ItemPedido();
             itemPedido.AttrDados(int.Parse(item[0]), int.Parse(item[1]));
 
-            itemPedidoRepository.UpdateQuantidade(itemPedido);
+            return pedidoRepository.UpdateQuantidade(itemPedido);
         }
     }
 }

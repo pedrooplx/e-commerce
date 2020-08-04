@@ -1,4 +1,5 @@
 ﻿using E_Commerce.Models;
+using E_Commerce.Models.ViewModels;
 using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -11,9 +12,11 @@ namespace E_Commerce.Repository
     public class PedidoRepository : BaseRepository<Pedido>, IPedidoRepository
     {
         private readonly IHttpContextAccessor contextAccessor;
-        public PedidoRepository(ApplicationContext context, IHttpContextAccessor contextAccessor) : base(context)
+        private readonly IItemPedidoRepository itemPedidoRepository;
+        public PedidoRepository(ApplicationContext context, IHttpContextAccessor contextAccessor, IItemPedidoRepository itemPedidoRepository) : base(context)
         {
             this.contextAccessor = contextAccessor;
+            this.itemPedidoRepository = itemPedidoRepository;
         }
 
         public void AddItem(string codigo)
@@ -67,6 +70,22 @@ namespace E_Commerce.Repository
         private void SetPedidoId(int pedidoId)
         {
             contextAccessor.HttpContext.Session.SetInt32("pedidoId", pedidoId);
+        }
+        public UpdateQuantidadeResponse UpdateQuantidade(ItemPedido itemPedido)
+        {
+            var itemDB = itemPedidoRepository.GetItemPedido(itemPedido.Id);
+
+            if (itemDB != null)
+            {
+                itemDB.AtualizaQuantidade(itemPedido.Quantidade); //Alterar quantidade do objeto no banco
+                context.SaveChanges();
+            
+                var carrinhoViewModel = new CarrinhoViewModel(GetPedido().Itens);
+
+                return new UpdateQuantidadeResponse(itemDB, carrinhoViewModel);
+            }
+
+            throw new ArgumentException("ItemPedido não encontrado");
         }
     }
 }

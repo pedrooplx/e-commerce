@@ -7,5 +7,6 @@ namespace E_Commerce.Repository
     {
         Pedido GetPedido();
         void AddItem(string codigo);
+        UpdateQuantidadeResponse UpdateQuantidade(ItemPedido itemPedido);
     }
 }

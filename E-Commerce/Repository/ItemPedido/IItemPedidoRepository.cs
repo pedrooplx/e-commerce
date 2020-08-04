@@ -4,6 +4,6 @@ namespace E_Commerce.Repository
 {
     public interface IItemPedidoRepository
     {
-        void UpdateQuantidade(ItemPedido itemPedido);
+        ItemPedido GetItemPedido(int itemPedidoId);
     }
 }

@@ -12,15 +12,12 @@ namespace E_Commerce.Repository
         {
 
         }
-        public void UpdateQuantidade(ItemPedido itemPedido)
-        {
-            var itemDB = dbSet.Where(ip => ip.Id == itemPedido.Id).SingleOrDefault(); //Puxa o objeto do banco
 
-            if(itemDB != null)
-            {
-                itemDB.AtualizaQuantidade(itemPedido.Quantidade); //Alterar quantidade do objeto do banco
-                context.SaveChanges();
-            }
+        public ItemPedido GetItemPedido(int itemPedidoId)
+        {
+            return dbSet
+                .Where(ip => ip.Id == itemPedidoId)
+                .SingleOrDefault(); //Puxa o objeto do banco
         }
     }
 }
