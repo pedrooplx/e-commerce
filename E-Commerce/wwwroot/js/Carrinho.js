@@ -1,7 +1,6 @@
 ﻿class Carrinho {
 
     clickIncremento(btn) {
-        debugger;
         let data = this.getData(btn);
         data.Quantidade++;
         this.postData(data);
@@ -35,8 +34,8 @@
             method: 'POST',
             contentType: 'application/json',
             data: JSON.stringify(data)
-        }).done(function (response) {
-            
+        }).done(function (request) {
+            //Não entra no método done
         });
     }
 }

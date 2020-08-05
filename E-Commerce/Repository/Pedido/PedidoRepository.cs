@@ -78,6 +78,12 @@ namespace E_Commerce.Repository
             if (itemDB != null)
             {
                 itemDB.AtualizaQuantidade(itemPedido.Quantidade); //Alterar quantidade do objeto no banco
+
+                if (itemPedido.Quantidade == 0)
+                {
+                    itemPedidoRepository.RemoveItemPedido(itemPedido.Id);
+                }
+
                 context.SaveChanges();
             
                 var carrinhoViewModel = new CarrinhoViewModel(GetPedido().Itens);

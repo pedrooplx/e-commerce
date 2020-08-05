@@ -19,5 +19,10 @@ namespace E_Commerce.Repository
                 .Where(ip => ip.Id == itemPedidoId)
                 .SingleOrDefault(); //Puxa o objeto do banco
         }
+
+        public void RemoveItemPedido(int itemPedidoId)
+        {
+            dbSet.Remove(GetItemPedido(itemPedidoId));
+        }
     }
 }
