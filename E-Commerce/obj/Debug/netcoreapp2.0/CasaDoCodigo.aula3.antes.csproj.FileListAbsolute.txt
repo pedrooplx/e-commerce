@@ -1,0 +1,16 @@
+D:\Documentos\GitHub\E-Commerce\E-Commerce\Aulas\Aula3\antes\CasaDoCodigo\bin\Debug\netcoreapp2.0\appsettings.Development.json
+D:\Documentos\GitHub\E-Commerce\E-Commerce\Aulas\Aula3\antes\CasaDoCodigo\bin\Debug\netcoreapp2.0\appsettings.json
+D:\Documentos\GitHub\E-Commerce\E-Commerce\Aulas\Aula3\antes\CasaDoCodigo\bin\Debug\netcoreapp2.0\bundleconfig.json
+D:\Documentos\GitHub\E-Commerce\E-Commerce\Aulas\Aula3\antes\CasaDoCodigo\bin\Debug\netcoreapp2.0\livros.json
+D:\Documentos\GitHub\E-Commerce\E-Commerce\Aulas\Aula3\antes\CasaDoCodigo\bin\Debug\netcoreapp2.0\Properties\launchSettings.json
+D:\Documentos\GitHub\E-Commerce\E-Commerce\Aulas\Aula3\antes\CasaDoCodigo\bin\Debug\netcoreapp2.0\CasaDoCodigo.aula3.antes.deps.json
+D:\Documentos\GitHub\E-Commerce\E-Commerce\Aulas\Aula3\antes\CasaDoCodigo\bin\Debug\netcoreapp2.0\CasaDoCodigo.aula3.antes.runtimeconfig.json
+D:\Documentos\GitHub\E-Commerce\E-Commerce\Aulas\Aula3\antes\CasaDoCodigo\bin\Debug\netcoreapp2.0\CasaDoCodigo.aula3.antes.runtimeconfig.dev.json
+D:\Documentos\GitHub\E-Commerce\E-Commerce\Aulas\Aula3\antes\CasaDoCodigo\bin\Debug\netcoreapp2.0\CasaDoCodigo.aula3.antes.dll
+D:\Documentos\GitHub\E-Commerce\E-Commerce\Aulas\Aula3\antes\CasaDoCodigo\bin\Debug\netcoreapp2.0\CasaDoCodigo.aula3.antes.pdb
+D:\Documentos\GitHub\E-Commerce\E-Commerce\Aulas\Aula3\antes\CasaDoCodigo\obj\Debug\netcoreapp2.0\CasaDoCodigo.aula3.antes.AssemblyInfoInputs.cache
+D:\Documentos\GitHub\E-Commerce\E-Commerce\Aulas\Aula3\antes\CasaDoCodigo\obj\Debug\netcoreapp2.0\CasaDoCodigo.aula3.antes.AssemblyInfo.cs
+D:\Documentos\GitHub\E-Commerce\E-Commerce\Aulas\Aula3\antes\CasaDoCodigo\obj\Debug\netcoreapp2.0\CasaDoCodigo.aula3.antes.csproj.CoreCompileInputs.cache
+D:\Documentos\GitHub\E-Commerce\E-Commerce\Aulas\Aula3\antes\CasaDoCodigo\obj\Debug\netcoreapp2.0\CasaDoCodigo.aula3.antes.dll
+D:\Documentos\GitHub\E-Commerce\E-Commerce\Aulas\Aula3\antes\CasaDoCodigo\obj\Debug\netcoreapp2.0\CasaDoCodigo.aula3.antes.pdb
+D:\Documentos\GitHub\E-Commerce\E-Commerce\Aulas\Aula3\antes\CasaDoCodigo\obj\Debug\netcoreapp2.0\CasaDoCodigo.aula3.antes.genruntimeconfig.cache
