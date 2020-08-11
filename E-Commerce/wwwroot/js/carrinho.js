@@ -43,6 +43,8 @@
             let carrinhoViewModel = response.carrinhoViewModel;
             $('[numero-itens]').html('Total: ' + carrinhoViewModel.itens.length + ' itens')
 
+            $('[total]').html((carrinhoViewModel.total).decimalVal());
+
             if (itemPedido.quantidade == 0) {
                 linhaDoItem.remove();
             }
