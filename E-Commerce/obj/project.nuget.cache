@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "1LBgoZe9ClHFmhNOJk1yexrUp+X6kKGXAbDLxZHEYQllHsNIUTgsgJTgFajAuBzgaXazXfBp3vepp5CQqwrINg==",
+  "dgSpecHash": "Ic24abDeQCmofMYWk/ICs7pPd0N1zh8p6JTxIhbyOwP3CU3nK9/dAxZSRFxh/zb6DpfFydgZQkE7JXM3Bxz7FQ==",
   "success": true,
-  "projectFilePath": "D:\\Documentos\\GitHub\\E-Commerce\\E-Commerce\\E-Commerce.csproj",
+  "projectFilePath": "D:\\Documentos\\GitHub\\E-Commerce\\E-Commerce\\CasaDoCodigo.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\PHS\\.nuget\\packages\\libuv\\1.10.0\\libuv.1.10.0.nupkg.sha512",
     "C:\\Users\\PHS\\.nuget\\packages\\microsoft.applicationinsights\\2.4.0\\microsoft.applicationinsights.2.4.0.nupkg.sha512",

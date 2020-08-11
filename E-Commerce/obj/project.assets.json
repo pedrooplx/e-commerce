@@ -13127,9 +13127,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Documentos\\GitHub\\E-Commerce\\E-Commerce\\E-Commerce.csproj",
-      "projectName": "E-Commerce",
-      "projectPath": "D:\\Documentos\\GitHub\\E-Commerce\\E-Commerce\\E-Commerce.csproj",
+      "projectUniqueName": "D:\\Documentos\\GitHub\\E-Commerce\\E-Commerce\\CasaDoCodigo.csproj",
+      "projectName": "CasaDoCodigo",
+      "projectPath": "D:\\Documentos\\GitHub\\E-Commerce\\E-Commerce\\CasaDoCodigo.csproj",
       "packagesPath": "C:\\Users\\PHS\\.nuget\\packages\\",
       "outputPath": "D:\\Documentos\\GitHub\\E-Commerce\\E-Commerce\\obj\\",
       "projectStyle": "PackageReference",
