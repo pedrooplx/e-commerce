@@ -68,6 +68,7 @@ namespace CasaDoCodigo.Controllers
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken] //Tambem serve para evitar ataques via Ajax, basta apenas criar o token
         public UpdateQuantidadeResponse UpdateQuantidade([FromBody]ItemPedido itemPedido)
         {
             return pedidoRepository.UpdateQuantidade(itemPedido);
