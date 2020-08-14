@@ -54,6 +54,10 @@ namespace CasaDoCodigo.Controllers
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
+        // ValidateAntiForgeryToken serve para evitarmos um ataque conhecido como CSRF, Cros-site request forgery 
+        //(Essa view podera ser acessada apenas pelo site, não há como invadirem externamento com esse Método)
+        // O token presente na view é validado ao entrar nesse método
         public IActionResult Resumo(Cadastro cadastro)
         {
             if (ModelState.IsValid)
