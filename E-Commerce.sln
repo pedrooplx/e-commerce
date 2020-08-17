@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30406.217
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CasaDoCodigo", "CasaDoCodigo\CasaDoCodigo.csproj", "{9811934C-6517-45DE-8C58-6B3099E8BFDC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9811934C-6517-45DE-8C58-6B3099E8BFDC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9811934C-6517-45DE-8C58-6B3099E8BFDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9811934C-6517-45DE-8C58-6B3099E8BFDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9811934C-6517-45DE-8C58-6B3099E8BFDC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E6252B83-4D85-46E0-9FC0-818D66E88BF6}
+	EndGlobalSection
+EndGlobal
