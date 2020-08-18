@@ -12,7 +12,6 @@ D:\Documentos\GitHub\E-Commerce\CasaDoCodigo\bin\Debug\netcoreapp2.2\CasaDoCodig
 D:\Documentos\GitHub\E-Commerce\CasaDoCodigo\bin\Debug\netcoreapp2.2\CasaDoCodigo.Views.pdb
 D:\Documentos\GitHub\E-Commerce\CasaDoCodigo\obj\Debug\netcoreapp2.2\CasaDoCodigo.AssemblyInfoInputs.cache
 D:\Documentos\GitHub\E-Commerce\CasaDoCodigo\obj\Debug\netcoreapp2.2\CasaDoCodigo.AssemblyInfo.cs
-D:\Documentos\GitHub\E-Commerce\CasaDoCodigo\obj\Debug\netcoreapp2.2\CasaDoCodigo.csproj.CoreCompileInputs.cache
 D:\Documentos\GitHub\E-Commerce\CasaDoCodigo\obj\Debug\netcoreapp2.2\CasaDoCodigo.RazorAssemblyInfo.cache
 D:\Documentos\GitHub\E-Commerce\CasaDoCodigo\obj\Debug\netcoreapp2.2\CasaDoCodigo.RazorAssemblyInfo.cs
 D:\Documentos\GitHub\E-Commerce\CasaDoCodigo\obj\Debug\netcoreapp2.2\CasaDoCodigo.TagHelpers.input.cache
@@ -35,3 +34,4 @@ D:\Documentos\GitHub\E-Commerce\CasaDoCodigo\obj\Debug\netcoreapp2.2\CasaDoCodig
 D:\Documentos\GitHub\E-Commerce\CasaDoCodigo\obj\Debug\netcoreapp2.2\CasaDoCodigo.pdb
 D:\Documentos\GitHub\E-Commerce\CasaDoCodigo\obj\Debug\netcoreapp2.2\CasaDoCodigo.genruntimeconfig.cache
 D:\Documentos\GitHub\E-Commerce\CasaDoCodigo\obj\Debug\netcoreapp2.2\CasaDoCodigo.csproj.CopyComplete
+D:\Documentos\GitHub\E-Commerce\CasaDoCodigo\obj\Debug\netcoreapp2.2\CasaDoCodigo.csprojAssemblyReference.cache
