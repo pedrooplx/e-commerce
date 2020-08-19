@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Documentos\\GitHub\\E-Commerce\\antes\\Item01\\CasaDoCodigo\\CasaDoCodigo.MVC.csproj": {}
+    "D:\\Documentos\\GitHub\\E-Commerce\\CasaDoCodigo\\CasaDoCodigo.MVC.csproj": {}
   },
   "projects": {
-    "D:\\Documentos\\GitHub\\E-Commerce\\antes\\Item01\\CasaDoCodigo\\CasaDoCodigo.MVC.csproj": {
+    "D:\\Documentos\\GitHub\\E-Commerce\\CasaDoCodigo\\CasaDoCodigo.MVC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Documentos\\GitHub\\E-Commerce\\antes\\Item01\\CasaDoCodigo\\CasaDoCodigo.MVC.csproj",
+        "projectUniqueName": "D:\\Documentos\\GitHub\\E-Commerce\\CasaDoCodigo\\CasaDoCodigo.MVC.csproj",
         "projectName": "CasaDoCodigo.MVC",
-        "projectPath": "D:\\Documentos\\GitHub\\E-Commerce\\antes\\Item01\\CasaDoCodigo\\CasaDoCodigo.MVC.csproj",
+        "projectPath": "D:\\Documentos\\GitHub\\E-Commerce\\CasaDoCodigo\\CasaDoCodigo.MVC.csproj",
         "packagesPath": "C:\\Users\\PHS\\.nuget\\packages\\",
-        "outputPath": "D:\\Documentos\\GitHub\\E-Commerce\\antes\\Item01\\CasaDoCodigo\\obj\\",
+        "outputPath": "D:\\Documentos\\GitHub\\E-Commerce\\CasaDoCodigo\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -45,11 +45,19 @@
               "target": "Package",
               "version": "[2.2.3, )"
             },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[2.2.4, )"
+            },
             "Microsoft.NETCore.App": {
               "suppressParent": "All",
               "target": "Package",
               "version": "[2.2.0, )",
               "autoReferenced": true
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[2.2.3, )"
             },
             "Serilog": {
               "target": "Package",
