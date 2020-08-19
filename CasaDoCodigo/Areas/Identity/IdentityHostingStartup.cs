@@ -22,7 +22,12 @@ namespace CasaDoCodigo.Areas.Identity
                     options.UseSqlite(
                         context.Configuration.GetConnectionString("AppIdentityContextConnection")));
 
-                services.AddDefaultIdentity<AppIdentityUser>()
+                services.AddDefaultIdentity<AppIdentityUser>(options => 
+                    {
+                        //Alterando opções de senha
+                        options.Password.RequireNonAlphanumeric = false; // A senha não exige um caracter alfanumérico após esse comando
+                        options.Password.RequireLowercase = false;  // A senha não exige um caracter minúsculo após esse comando
+                    })
                     .AddErrorDescriber<IdentityErrorDescribePtBr>()
                     .AddEntityFrameworkStores<AppIdentityContext>();
             });
