@@ -101,8 +101,11 @@ namespace CasaDoCodigo
             //INTEGRACAO 1) adicionar componente Identity
             //ASP.NET Core utiliza o padrão "Cadeia de Responsabilidade (Chain of Responsibility)"
             //https://pt.wikipedia.org/wiki/Chain_of_Responsibility
-            //v
+
             app.UseAuthentication();
+
+            //O ASP.NET Core Identity é como se fosse um middleware - um componente intermedipario que vai entrar ni pipeline da aplicação
+            //um componente que vai tratar a requisição e direcionar essa requisição para o próximo componente do pipeline ou fazer algum desvio para solicitar login ou novo cadastro
             
             app.UseSession();
             app.UseMvc(routes =>
