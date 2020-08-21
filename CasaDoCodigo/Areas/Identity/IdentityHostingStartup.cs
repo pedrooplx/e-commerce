@@ -27,6 +27,7 @@ namespace CasaDoCodigo.Areas.Identity
                         //Alterando opções de senha
                         options.Password.RequireNonAlphanumeric = false; // A senha não exige um caracter alfanumérico após esse comando
                         options.Password.RequireLowercase = false;  // A senha não exige um caracter minúsculo após esse comando
+                        options.Password.RequireUppercase = false;  // A senha não exige um caracter maiúsculo após esse comando
                     })
                     .AddErrorDescriber<IdentityErrorDescribePtBr>()
                     .AddEntityFrameworkStores<AppIdentityContext>();
