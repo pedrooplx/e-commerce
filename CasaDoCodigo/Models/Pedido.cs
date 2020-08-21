@@ -27,5 +27,9 @@ namespace CasaDoCodigo.Models
         public int CadastroId { get; set; }
         [Required]
         public virtual Cadastro Cadastro { get; private set; }
+
+        //Adicionar Id do cliente ao pedido
+        [Required]
+        public string ClienteId { get; set; }
     }
 }
