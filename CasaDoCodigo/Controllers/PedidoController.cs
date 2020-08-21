@@ -59,7 +59,8 @@ namespace CasaDoCodigo.Controllers
                 return RedirectToAction("Carrossel");
             }
 
-            var usuario = await userManager.GetUserAsync(this.User);
+            var usuario = await userManager.GetUserAsync(this.User); 
+            //this.User é uma propriedade de todo controller do Asp.NET Core, ela vem desde a classe base do controller
 
             pedido.Cadastro.Email = usuario.Email;
             pedido.Cadastro.Telefone = usuario.Telefone;
@@ -83,6 +84,7 @@ namespace CasaDoCodigo.Controllers
             {
 
                 var usuario = await userManager.GetUserAsync(this.User);
+                //this.User é uma propriedade de todo controller do Asp.NET Core, ela vem desde a classe base do controller
 
                 usuario.Email = cadastro.Email;
                 usuario.Telefone = cadastro.Telefone;
