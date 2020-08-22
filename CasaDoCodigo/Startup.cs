@@ -77,6 +77,15 @@ namespace CasaDoCodigo
             services.AddTransient<IProdutoRepository, ProdutoRepository>();
             services.AddTransient<IPedidoRepository, PedidoRepository>();
             services.AddTransient<ICadastroRepository, CadastroRepository>();
+
+            //Para permitir o login externo com a conta da microfot
+            //Configurar: https://portal.azure.com/#blade/Microsoft_AAD_RegisteredApps/ApplicationsListBlade
+            //Configurando o Provedor Externo Microsoft pelo Azure: https://cursos.alura.com.br/course/aspnet-core-identity/task/57095
+            services.AddAuthentication().AddMicrosoftAccount(option =>
+            {
+                option.ClientId = Configuration["ExternalLogin:Microsoft:ClienteId"];
+                option.ClientSecret = Configuration["ExternalLogin:Microsoft:ClientSecret"];
+            });
         }
 
 
