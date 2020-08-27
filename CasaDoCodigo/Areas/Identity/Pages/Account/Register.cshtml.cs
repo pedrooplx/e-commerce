@@ -13,8 +13,10 @@ using Microsoft.Extensions.Logging;
 
 namespace CasaDoCodigo.Areas.Identity.Pages.Account
 {
+    //ESTE É O MODELO DE UMA RAZOR PAGE!
+    //ELE CONTÉM OS MÉTODOS QUE ESTARIAM
+    //      NO CONTROLLER!
     [AllowAnonymous]
-    //PageModel implementa o padrão ViewModel
     public class RegisterModel : PageModel
     {
         private readonly SignInManager<AppIdentityUser> _signInManager;
@@ -22,6 +24,8 @@ namespace CasaDoCodigo.Areas.Identity.Pages.Account
         private readonly ILogger<RegisterModel> _logger;
         private readonly IEmailSender _emailSender;
 
+        //O MODELO DA PÁGINA É CRIADO POR INJEÇÃO 
+        //DE DEPENDÊNCIA!
         public RegisterModel(
             UserManager<AppIdentityUser> userManager,
             SignInManager<AppIdentityUser> signInManager,
@@ -47,14 +51,14 @@ namespace CasaDoCodigo.Areas.Identity.Pages.Account
             public string Email { get; set; }
 
             [Required]
-            [StringLength(100, ErrorMessage = "{0} deve ter no mínimo {2} e máximo de {1} caracteres.", MinimumLength = 6)]
+            [StringLength(100, ErrorMessage = "O campo {0} precisa ter no mínimo {2} e no máximo {1} caracteres.", MinimumLength = 6)]
             [DataType(DataType.Password)]
             [Display(Name = "Senha")]
             public string Password { get; set; }
 
             [DataType(DataType.Password)]
-            [Display(Name = "Confirme a senha")]
-            [Compare("Password", ErrorMessage = "A senha e confirmação de senha não conferem")]
+            [Display(Name = "Confirmar Senha")]
+            [Compare("Password", ErrorMessage = "A senha e a confirmação não conferem.")]
             public string ConfirmPassword { get; set; }
         }
 

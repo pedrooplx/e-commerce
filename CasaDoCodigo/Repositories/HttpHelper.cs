@@ -7,14 +7,17 @@ using Newtonsoft.Json;
 
 namespace CasaDoCodigo
 {
-    //MELHORIA: 8) dados do cadastro gravados na sessão
+    //TAREFA 05: INJETAR UserManager PARA OBTER clienteId
     public class HttpHelper : IHttpHelper
     {
         private readonly IHttpContextAccessor contextAccessor;
-        public IConfiguration Configuration { get; }
-        public UserManager<AppIdentityUser> userManager { get; }
+        private readonly UserManager<AppIdentityUser> userManager;
 
-        public HttpHelper(IHttpContextAccessor contextAccessor, IConfiguration configuration, UserManager<AppIdentityUser> userManager)
+        public IConfiguration Configuration { get; }
+
+        public HttpHelper(IHttpContextAccessor contextAccessor
+            , IConfiguration configuration
+            , UserManager<AppIdentityUser> userManager)
         {
             this.contextAccessor = contextAccessor;
             Configuration = configuration;
@@ -26,7 +29,6 @@ namespace CasaDoCodigo
             return contextAccessor.HttpContext.Session.GetInt32($"pedidoId_{GetClienteId()}");
         }
 
-
         public void SetPedidoId(int pedidoId)
         {
             contextAccessor.HttpContext.Session.SetInt32($"pedidoId_{GetClienteId()}", pedidoId);
@@ -36,26 +38,11 @@ namespace CasaDoCodigo
         {
             contextAccessor.HttpContext.Session.Remove($"pedidoId_{GetClienteId()}");
         }
+
         private string GetClienteId()
         {
             var claimsPrincipal = contextAccessor.HttpContext.User;
             return userManager.GetUserId(claimsPrincipal);
         }
-
-        public void SetCadastro(Cadastro cadastro)
-        {
-            string json = JsonConvert.SerializeObject(cadastro.GetClone());
-            contextAccessor.HttpContext.Session.SetString("cadastro", json);
-        }
-
-        public Cadastro GetCadastro()
-        {
-            string json = contextAccessor.HttpContext.Session.GetString("cadastro");
-            if (string.IsNullOrWhiteSpace(json))
-                return new Cadastro();
-
-            return JsonConvert.DeserializeObject<Cadastro>(json);
-        }
     }
-
 }
