@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 
@@ -12,36 +13,25 @@ namespace WebAPI.CasaDoCodigo.Controllers
     [ApiController]
     public class RelatorioController : ControllerBase
     {
+        private static readonly List<string> Relatorio = new List<string>() { "Primeiro pedido", "Segundo pedido", "Terceiro pedido" };
+
         // GET: api/<Relatorio>
         [HttpGet]
-        public IEnumerable<string> Get()
+        public string Get()
         {
-            return new string[] { "value1", "value2" };
-        }
-
-        // GET api/<Relatorio>/5
-        [HttpGet("{id}")]
-        public string Get(int id)
-        {
-            return "value";
+            StringBuilder stringBuilder = new StringBuilder();
+            foreach (var item in Relatorio)
+            {
+                stringBuilder.AppendLine(item);
+            }
+            return stringBuilder.ToString();
         }
 
         // POST api/<Relatorio>
         [HttpPost]
         public void Post([FromBody] string value)
         {
-        }
-
-        // PUT api/<Relatorio>/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
-        {
-        }
-
-        // DELETE api/<Relatorio>/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
-        {
+            Relatorio.Add(value);
         }
     }
 }
