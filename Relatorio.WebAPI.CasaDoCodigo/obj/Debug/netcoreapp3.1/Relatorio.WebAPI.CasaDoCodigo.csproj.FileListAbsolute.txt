@@ -1,0 +1,5 @@
+D:\Documentos\GitHub\E-Commerce\Relatorio.WebAPI.CasaDoCodigo\obj\Debug\netcoreapp3.1\Relatorio.WebAPI.CasaDoCodigo.csprojAssemblyReference.cache
+D:\Documentos\GitHub\E-Commerce\Relatorio.WebAPI.CasaDoCodigo\obj\Debug\netcoreapp3.1\Relatorio.WebAPI.CasaDoCodigo.AssemblyInfoInputs.cache
+D:\Documentos\GitHub\E-Commerce\Relatorio.WebAPI.CasaDoCodigo\obj\Debug\netcoreapp3.1\Relatorio.WebAPI.CasaDoCodigo.AssemblyInfo.cs
+D:\Documentos\GitHub\E-Commerce\Relatorio.WebAPI.CasaDoCodigo\obj\Debug\netcoreapp3.1\Relatorio.WebAPI.CasaDoCodigo.csproj.CoreCompileInputs.cache
+D:\Documentos\GitHub\E-Commerce\Relatorio.WebAPI.CasaDoCodigo\obj\Debug\netcoreapp3.1\Relatorio.WebAPI.CasaDoCodigo.MvcApplicationPartsAssemblyInfo.cache

@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.30406.217
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CasaDoCodigo.MVC", "CasaDoCodigo\CasaDoCodigo.MVC.csproj", "{993B65BA-04E5-45D1-8248-B8FBA991491D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAPI.CasaDoCodigo", "WebAPI.CasaDoCodigo\WebAPI.CasaDoCodigo.csproj", "{C747520F-45A3-41F6-A222-4B746D36AAEF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{993B65BA-04E5-45D1-8248-B8FBA991491D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{993B65BA-04E5-45D1-8248-B8FBA991491D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{993B65BA-04E5-45D1-8248-B8FBA991491D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C747520F-45A3-41F6-A222-4B746D36AAEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C747520F-45A3-41F6-A222-4B746D36AAEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C747520F-45A3-41F6-A222-4B746D36AAEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C747520F-45A3-41F6-A222-4B746D36AAEF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
