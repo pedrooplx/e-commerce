@@ -79,33 +79,20 @@ namespace CasaDoCodigo
             services.AddTransient<ICadastroRepository, CadastroRepository>();
             services.AddTransient<IRelatorioHelper, RelatorioHelper>();
 
-            //TAREFA: Permitir login externo 
-            //com a conta da Microsoft
-            //https://apps.dev.microsoft.com/
-
-            //TAREFA: Permitir login externo 
-            //com a conta do Google
-            //https://developers.google.com/identity/sign-in/web/sign-in
-
-
-            //HABILITE ESTAS LINHAS ABAIXO APENAS
-            //APÓS CONFIGURAR SUA APLICAÇÃO NA MICROSOFT E NO GOOGLE.
-
-            //services.AddAuthentication()
-            //    .AddMicrosoftAccount(options =>
-            //    {
-            //        options.ClientId = Configuration["ExternalLogin:Microsoft:ClientId"];
-            //        options.ClientSecret = Configuration["ExternalLogin:Microsoft:ClientSecret"];
-            //    })
-            //    .AddGoogle(options =>
-            //    {
-            //        options.ClientId = Configuration["ExternalLogin:Google:ClientId"];
-            //        options.ClientSecret = Configuration["ExternalLogin:Google:ClientSecret"];
-            //    });
-
-            services.AddHttpClient<RelatorioHelper>();
+            //Para permitir o login externo com a conta da microfot
+            //Configurar: https://portal.azure.com/#blade/Microsoft_AAD_RegisteredApps/ApplicationsListBlade
+            //Configurando o Provedor Externo Microsoft pelo Azure: https://cursos.alura.com.br/course/aspnet-core-identity/task/57095
+            services.AddAuthentication()
+                .AddMicrosoftAccount(option =>
+                {
+                    option.ClientId = Configuration["ExternalLogin:Microsoft:ClienteId"];
+                    option.ClientSecret = Configuration["ExternalLogin:Microsoft:ClientSecret"];
+                })
+                .AddGoogle(option => {
+                    option.ClientId = Configuration["ExternalLogin:Google:ClienteId"];
+                    option.ClientSecret = Configuration["ExternalLogin:Google:ClientSecret"];
+                });
         }
-
 
         // Este método é chamado pelo runtime.
         // Use este método para configurar o pipeline de requisições HTTP.
@@ -124,11 +111,15 @@ namespace CasaDoCodigo
             }
 
             app.UseStaticFiles();
-            app.UseAuthentication();
             //INTEGRACAO 1) adicionar componente Identity
-            //ASP.NET Core utiliza o padrão "Cadeia de Responsabilidade"
+            //ASP.NET Core utiliza o padrão "Cadeia de Responsabilidade (Chain of Responsibility)"
             //https://pt.wikipedia.org/wiki/Chain_of_Responsibility
-            /// <image url="pipeline4.png" scale="0.75"/>
+
+            app.UseAuthentication();
+
+            //O ASP.NET Core Identity é como se fosse um middleware - um componente intermedipario que vai entrar ni pipeline da aplicação
+            //um componente que vai tratar a requisição e direcionar essa requisição para o próximo componente do pipeline ou fazer algum desvio para solicitar login ou novo cadastro
+            
             app.UseSession();
             app.UseMvc(routes =>
             {

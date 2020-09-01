@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CasaDoCodigo.Migrations
 {
     [DbContext(typeof(ApplicationContext))]
-    [Migration("20190527191333_Pedido_ClienteId")]
+    [Migration("20200821014501_Pedido_ClienteId")]
     partial class Pedido_ClienteId
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

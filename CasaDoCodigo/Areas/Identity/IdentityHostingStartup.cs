@@ -8,45 +8,34 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
+//Classe de statup especifica para configuar o identity
+
 [assembly: HostingStartup(typeof(CasaDoCodigo.Areas.Identity.IdentityHostingStartup))]
 namespace CasaDoCodigo.Areas.Identity
 {
-    //PRECISAMOS TRADUZIR AS MENSAGENS DE ERRO DE SENHAS:
-
-    //ORIGINAL:
-    //=========
-    //Passwords must have at least one non alphanumeric character.
-    //Passwords must have at least one lowercase('a' - 'z').
-    //Passwords must have at least one uppercase('A' - 'Z').
-
-    //PT-BR:
-    //=========
-    //A senha deve ter pelo menos um caractere alfanumérico.
-    //A senha deve ter pelo menos uma letra minúscula('a' - 'z').
-    //A senha deve ter pelo menos uma letra minúscula('a' - 'z').
     public class IdentityHostingStartup : IHostingStartup
     {
         public void Configure(IWebHostBuilder builder)
         {
-            builder.ConfigureServices((context, services) =>
-            {
+            builder.ConfigureServices((context, services) => {
                 services.AddDbContext<AppIdentityContext>(options =>
                     options.UseSqlite(
                         context.Configuration.GetConnectionString("AppIdentityContextConnection")));
 
-                services.AddDefaultIdentity<AppIdentityUser>(options =>
+                services.AddDefaultIdentity<AppIdentityUser>(options => 
                     {
-                        options.Password.RequireNonAlphanumeric = 
-                        options.Password.RequireLowercase = 
-                        options.Password.RequireUppercase = false;
+                        //Alterando opções de senha
+                        options.Password.RequireNonAlphanumeric = false; // A senha não exige um caracter alfanumérico após esse comando
+                        options.Password.RequireLowercase = false;  // A senha não exige um caracter minúsculo após esse comando
+                        options.Password.RequireUppercase = false;  // A senha não exige um caracter maiúsculo após esse comando
                     })
-                    .AddErrorDescriber<IdentityErrorDescriberPtBr>()
+                    .AddErrorDescriber<IdentityErrorDescribePtBr>()
                     .AddEntityFrameworkStores<AppIdentityContext>();
             });
         }
     }
 
-    internal class IdentityErrorDescriberPtBr : IdentityErrorDescriber
+    internal class IdentityErrorDescribePtBr : IdentityErrorDescriber
     {
         public override IdentityError ConcurrencyFailure()
         {
@@ -120,18 +109,16 @@ namespace CasaDoCodigo.Areas.Identity
 
         public override IdentityError PasswordRequiresLower()
         {
-            //A senha deve ter pelo menos uma letra minúscula('a' - 'z').
             return new IdentityError
             {
                 Code = nameof(PasswordRequiresLower),
-                Description = "A senha deve ter pelo menos uma letra minúscula('a' - 'z')."
+                Description = "A senha deve ter pelo menos uma letra minúscula ('a' - 'z')."
             };
         }
 
         public override IdentityError PasswordRequiresNonAlphanumeric()
         {
-            return new IdentityError
-            {
+            return new IdentityError { 
                 Code = nameof(PasswordRequiresNonAlphanumeric),
                 Description = "A senha deve ter pelo menos um caractere alfanumérico."
             };
@@ -144,11 +131,10 @@ namespace CasaDoCodigo.Areas.Identity
 
         public override IdentityError PasswordRequiresUpper()
         {
-            //A senha deve ter pelo menos uma letra minúscula('a' - 'z').
             return new IdentityError
             {
                 Code = nameof(PasswordRequiresUpper),
-                Description = "A senha deve ter pelo menos uma letra maiúscula('A' - 'Z')."
+                Description = "A senha deve ter pelo menos uma letra maiúscula. ('A' - 'Z')"
             };
         }
 

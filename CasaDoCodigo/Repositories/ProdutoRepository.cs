@@ -45,7 +45,7 @@ namespace CasaDoCodigo.Repositories
         }
 
         //MELHORIA: 1) Métodos assíncronos
-        //Para saber mais: C#: Paralelismo no mundo real
+        //Para saber mais: C#: Paralelismo no mundo rea
         //https://cursos.alura.com.br/course/csharp-paralelismo-no-mundo-real/task/27900
         public async Task SaveProdutosAsync(List<Livro> livros)
         {

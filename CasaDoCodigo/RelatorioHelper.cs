@@ -17,39 +17,37 @@ namespace CasaDoCodigo
     public class RelatorioHelper : IRelatorioHelper
     {
         private const string relativeUri = "api/relatorio";
-        private readonly HttpClient httpClient;
 
         public IConfiguration configuration { get; }
-        public RelatorioHelper(IConfiguration configuration, HttpClient httpClient)
+        public RelatorioHelper(IConfiguration configuration)
         {
             this.configuration = configuration;
-            this.httpClient = httpClient;
         }
 
         public async Task GerarRelatorio(Pedido pedido)
         {
             string linhaRelatorio = await GetLinhaRelatorio(pedido);
 
-            //HttpClient não detecta mudanças no DNS então se deve usar HttpClientFactory
-            //using (HttpClient httpClient = new HttpClient())
-            
-            // o texto do conteúdo (JSON)
-            var json = JsonConvert.SerializeObject(linhaRelatorio);
-            // o objeto que "empacota" o texto (application/json)
-            HttpContent httpContent = new StringContent(json, Encoding.UTF8, "application/json");
-            //URI - Identificador universal de recurso
-
-            //Endereço base: http://localhost:5002/
-            //Endereço relativo: api/relatorio
-
-            Uri baseUri = new Uri(configuration["RelatorioWebAPIURL"]); //Pegando dados de appsettings.json
-
-            Uri uri = new Uri(baseUri, relativeUri);
-            HttpResponseMessage responseMessage = await httpClient.PostAsync(uri, httpContent);
-
-            if (!responseMessage.IsSuccessStatusCode)
+            using (HttpClient httpClient = new HttpClient())
             {
-                throw new ApplicationException(responseMessage.ReasonPhrase);
+                // o texto do conteúdo (JSON)
+                var json = JsonConvert.SerializeObject(linhaRelatorio);
+                // o objeto que "empacota" o texto (application/json)
+                HttpContent httpContent = new StringContent(json, Encoding.UTF8, "application/json");
+                //URI - Identificador universal de recurso
+
+                //Endereço base: http://localhost:5002/
+                //Endereço relativo: api/relatorio
+
+                Uri baseUri = new Uri(configuration["RelatorioWebAPIURL"]); //Pegando dados de appsettings.json
+
+                Uri uri = new Uri(baseUri, relativeUri);
+                HttpResponseMessage responseMessage = await httpClient.PostAsync(uri, httpContent);
+
+                if (!responseMessage.IsSuccessStatusCode)
+                {
+                    throw new ApplicationException(responseMessage.ReasonPhrase);
+                }
             }
         }
 
