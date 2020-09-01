@@ -92,6 +92,8 @@ namespace CasaDoCodigo
                     option.ClientId = Configuration["ExternalLogin:Google:ClienteId"];
                     option.ClientSecret = Configuration["ExternalLogin:Google:ClientSecret"];
                 });
+
+            services.AddHttpClient<IRelatorioHelper, RelatorioHelper>();
         }
 
         // Este método é chamado pelo runtime.

@@ -17,37 +17,36 @@ namespace CasaDoCodigo
     public class RelatorioHelper : IRelatorioHelper
     {
         private const string relativeUri = "api/relatorio";
+        private readonly HttpClient httpClient;
 
         public IConfiguration configuration { get; }
-        public RelatorioHelper(IConfiguration configuration)
+        public RelatorioHelper(IConfiguration configuration, HttpClient httpClient)
         {
             this.configuration = configuration;
+            this.httpClient = httpClient;
         }
 
         public async Task GerarRelatorio(Pedido pedido)
         {
             string linhaRelatorio = await GetLinhaRelatorio(pedido);
 
-            using (HttpClient httpClient = new HttpClient())
+            // o texto do conteúdo (JSON)
+            var json = JsonConvert.SerializeObject(linhaRelatorio);
+            // o objeto que "empacota" o texto (application/json)
+            HttpContent httpContent = new StringContent(json, Encoding.UTF8, "application/json");
+            //URI - Identificador universal de recurso
+
+            //Endereço base: http://localhost:5002/
+            //Endereço relativo: api/relatorio
+
+            Uri baseUri = new Uri(configuration["RelatorioWebAPIURL"]); //Pegando dados de appsettings.json
+
+            Uri uri = new Uri(baseUri, relativeUri);
+            HttpResponseMessage responseMessage = await httpClient.PostAsync(uri, httpContent);
+
+            if (!responseMessage.IsSuccessStatusCode)
             {
-                // o texto do conteúdo (JSON)
-                var json = JsonConvert.SerializeObject(linhaRelatorio);
-                // o objeto que "empacota" o texto (application/json)
-                HttpContent httpContent = new StringContent(json, Encoding.UTF8, "application/json");
-                //URI - Identificador universal de recurso
-
-                //Endereço base: http://localhost:5002/
-                //Endereço relativo: api/relatorio
-
-                Uri baseUri = new Uri(configuration["RelatorioWebAPIURL"]); //Pegando dados de appsettings.json
-
-                Uri uri = new Uri(baseUri, relativeUri);
-                HttpResponseMessage responseMessage = await httpClient.PostAsync(uri, httpContent);
-
-                if (!responseMessage.IsSuccessStatusCode)
-                {
-                    throw new ApplicationException(responseMessage.ReasonPhrase);
-                }
+                throw new ApplicationException(responseMessage.ReasonPhrase);
             }
         }
 
