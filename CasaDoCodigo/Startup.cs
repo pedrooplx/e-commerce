@@ -78,7 +78,7 @@ namespace CasaDoCodigo
             services.AddTransient<IPedidoRepository, PedidoRepository>();
             services.AddTransient<ICadastroRepository, CadastroRepository>();
             services.AddTransient<IRelatorioHelper, RelatorioHelper>();
-            
+
             //TAREFA: Permitir login externo 
             //com a conta da Microsoft
             //https://apps.dev.microsoft.com/
@@ -102,13 +102,14 @@ namespace CasaDoCodigo
             //        options.ClientId = Configuration["ExternalLogin:Google:ClientId"];
             //        options.ClientSecret = Configuration["ExternalLogin:Google:ClientSecret"];
             //    });
+
+            services.AddHttpClient<RelatorioHelper>();
         }
 
 
         // Este método é chamado pelo runtime.
         // Use este método para configurar o pipeline de requisições HTTP.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env,
-            IServiceProvider serviceProvider)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, IServiceProvider serviceProvider)
         {
             _loggerFactory.AddSerilog();
 
