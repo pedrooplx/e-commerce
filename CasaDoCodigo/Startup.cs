@@ -82,16 +82,37 @@ namespace CasaDoCodigo
             //Para permitir o login externo com a conta da microfot
             //Configurar: https://portal.azure.com/#blade/Microsoft_AAD_RegisteredApps/ApplicationsListBlade
             //Configurando o Provedor Externo Microsoft pelo Azure: https://cursos.alura.com.br/course/aspnet-core-identity/task/57095
-            services.AddAuthentication()
-                .AddMicrosoftAccount(option =>
-                {
-                    option.ClientId = Configuration["ExternalLogin:Microsoft:ClienteId"];
-                    option.ClientSecret = Configuration["ExternalLogin:Microsoft:ClientSecret"];
-                })
-                .AddGoogle(option => {
-                    option.ClientId = Configuration["ExternalLogin:Google:ClienteId"];
-                    option.ClientSecret = Configuration["ExternalLogin:Google:ClientSecret"];
-                });
+            //services.AddAuthentication()
+            //    .AddMicrosoftAccount(option =>
+            //    {
+            //        option.ClientId = Configuration["ExternalLogin:Microsoft:ClienteId"];
+            //        option.ClientSecret = Configuration["ExternalLogin:Microsoft:ClientSecret"];
+            //    })
+            //    .AddGoogle(option => {
+            //        option.ClientId = Configuration["ExternalLogin:Google:ClienteId"];
+            //        option.ClientSecret = Configuration["ExternalLogin:Google:ClientSecret"];
+            //    });
+
+            services.AddAuthentication(options =>
+            {
+                //forma de autenticação local do usuário
+                options.DefaultScheme = "Cookies";
+                //protocolo que define o fluxo de autenticação
+                options.DefaultChallengeScheme = "OpenIdConnect";
+            })
+            .AddCookie()
+            .AddOpenIdConnect(options =>
+            {
+                options.SignInScheme = "Cookies";
+                options.Authority = "https://localhost:5000";
+                options.ClientId = "CasaDoCodigo.MVC";
+                options.ClientSecret = "511536EF-F270-4058-80CA-1C89C192F69A";
+                options.SaveTokens = true;
+                //1) autorização e 2) identidade do usuário
+                options.ResponseType = "code id_token";
+                //código de autorização + token de identidade
+                options.RequireHttpsMetadata = false;
+            });
 
             services.AddHttpClient<IRelatorioHelper, RelatorioHelper>();
         }

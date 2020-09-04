@@ -29,7 +29,7 @@ namespace IdentityServer.CasaDoCodigo
                 // m2m client credentials flow client
                 new Client
                 {
-                    ClientId = "m2m.client",
+                    ClientId = "CasaDoCodigo.MVC",
                     ClientName = "Client Credentials Client",
 
                     AllowedGrantTypes = GrantTypes.ClientCredentials,

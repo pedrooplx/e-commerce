@@ -146,3 +146,4 @@ D:\Documentos\GitHub\E-Commerce\CasaDoCodigo\obj\Debug\netcoreapp2.2\CasaDoCodig
 D:\Documentos\GitHub\E-Commerce\CasaDoCodigo\obj\Debug\netcoreapp2.2\CasaDoCodigo.MVC.pdb
 D:\Documentos\GitHub\E-Commerce\CasaDoCodigo\obj\Debug\netcoreapp2.2\CasaDoCodigo.MVC.genruntimeconfig.cache
 D:\Documentos\GitHub\E-Commerce\CasaDoCodigo\obj\Debug\netcoreapp2.2\CasaDoCodigo.MVC.csproj.CopyComplete
+D:\Documentos\GitHub\E-Commerce\CasaDoCodigo\obj\Debug\netcoreapp2.2\CasaDoCodigo.MVC.csprojAssemblyReference.cache
