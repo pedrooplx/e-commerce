@@ -79,18 +79,28 @@ namespace CasaDoCodigo
             services.AddTransient<ICadastroRepository, CadastroRepository>();
             services.AddTransient<IRelatorioHelper, RelatorioHelper>();
 
-            //Para permitir o login externo com a conta da microfot
-            //Configurar: https://portal.azure.com/#blade/Microsoft_AAD_RegisteredApps/ApplicationsListBlade
-            //Configurando o Provedor Externo Microsoft pelo Azure: https://cursos.alura.com.br/course/aspnet-core-identity/task/57095
+            //TAREFA: Permitir login externo 
+            //com a conta da Microsoft
+            //https://apps.dev.microsoft.com/
+
+            //TAREFA: Permitir login externo 
+            //com a conta do Google
+            //https://developers.google.com/identity/sign-in/web/sign-in
+
+
+            //HABILITE ESTAS LINHAS ABAIXO APENAS
+            //APÓS CONFIGURAR SUA APLICAÇÃO NA MICROSOFT E NO GOOGLE.
+
             //services.AddAuthentication()
-            //    .AddMicrosoftAccount(option =>
+            //    .AddMicrosoftAccount(options =>
             //    {
-            //        option.ClientId = Configuration["ExternalLogin:Microsoft:ClienteId"];
-            //        option.ClientSecret = Configuration["ExternalLogin:Microsoft:ClientSecret"];
+            //        options.ClientId = Configuration["ExternalLogin:Microsoft:ClientId"];
+            //        options.ClientSecret = Configuration["ExternalLogin:Microsoft:ClientSecret"];
             //    })
-            //    .AddGoogle(option => {
-            //        option.ClientId = Configuration["ExternalLogin:Google:ClienteId"];
-            //        option.ClientSecret = Configuration["ExternalLogin:Google:ClientSecret"];
+            //    .AddGoogle(options =>
+            //    {
+            //        options.ClientId = Configuration["ExternalLogin:Google:ClientId"];
+            //        options.ClientSecret = Configuration["ExternalLogin:Google:ClientSecret"];
             //    });
 
             services.AddAuthentication(options =>
@@ -104,9 +114,9 @@ namespace CasaDoCodigo
             .AddOpenIdConnect(options =>
             {
                 options.SignInScheme = "Cookies";
-                options.Authority = "https://localhost:5000";
+                options.Authority = "http://localhost:5000";
                 options.ClientId = "CasaDoCodigo.MVC";
-                options.ClientSecret = "511536EF-F270-4058-80CA-1C89C192F69A";
+                options.ClientSecret = "49C1A7E1-0C79-4A89-A3D6-A37998FB86B0";
                 options.SaveTokens = true;
                 //1) autorização e 2) identidade do usuário
                 options.ResponseType = "code id_token";
@@ -117,9 +127,11 @@ namespace CasaDoCodigo
             services.AddHttpClient<IRelatorioHelper, RelatorioHelper>();
         }
 
+
         // Este método é chamado pelo runtime.
         // Use este método para configurar o pipeline de requisições HTTP.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env, IServiceProvider serviceProvider)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env,
+            IServiceProvider serviceProvider)
         {
             _loggerFactory.AddSerilog();
 
@@ -134,15 +146,11 @@ namespace CasaDoCodigo
             }
 
             app.UseStaticFiles();
-            //INTEGRACAO 1) adicionar componente Identity
-            //ASP.NET Core utiliza o padrão "Cadeia de Responsabilidade (Chain of Responsibility)"
-            //https://pt.wikipedia.org/wiki/Chain_of_Responsibility
-
             app.UseAuthentication();
-
-            //O ASP.NET Core Identity é como se fosse um middleware - um componente intermedipario que vai entrar ni pipeline da aplicação
-            //um componente que vai tratar a requisição e direcionar essa requisição para o próximo componente do pipeline ou fazer algum desvio para solicitar login ou novo cadastro
-            
+            //INTEGRACAO 1) adicionar componente Identity
+            //ASP.NET Core utiliza o padrão "Cadeia de Responsabilidade"
+            //https://pt.wikipedia.org/wiki/Chain_of_Responsibility
+            /// <image url="pipeline4.png" scale="0.75"/>
             app.UseSession();
             app.UseMvc(routes =>
             {

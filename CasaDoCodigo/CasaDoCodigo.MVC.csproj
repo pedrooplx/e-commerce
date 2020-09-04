@@ -9,6 +9,10 @@
   <ItemGroup>
     <None Remove="middlewares.png" />
     <None Remove="pipeline.png" />
+    <None Remove="pipeline1.png" />
+    <None Remove="pipeline2.png" />
+    <None Remove="pipeline3.png" />
+    <None Remove="pipeline4.png" />
   </ItemGroup>
 
   <ItemGroup>

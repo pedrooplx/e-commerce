@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30406.217
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CasaDoCodigo.MVC", "CasaDoCodigo\CasaDoCodigo.MVC.csproj", "{993B65BA-04E5-45D1-8248-B8FBA991491D}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebAPI.CasaDoCodigo", "WebAPI.CasaDoCodigo\WebAPI.CasaDoCodigo.csproj", "{C747520F-45A3-41F6-A222-4B746D36AAEF}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IdentityServer.CasaDoCodigo", "IdentityServer.CasaDoCodigo\IdentityServer.CasaDoCodigo.csproj", "{B20DC0DC-78DE-4988-B44C-FB2280C31F9A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CasaDoCodigo.IdentityServer", "CasaDoCodigo.IdentityServer\CasaDoCodigo.IdentityServer.csproj", "{B86A1F1D-7A57-419B-BD77-C1D2459C17F0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CasaDoCodigo.MVC", "CasaDoCodigo\CasaDoCodigo.MVC.csproj", "{537894ED-8315-4571-AC0B-351C1F165F4E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,18 +15,18 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{993B65BA-04E5-45D1-8248-B8FBA991491D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{993B65BA-04E5-45D1-8248-B8FBA991491D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{993B65BA-04E5-45D1-8248-B8FBA991491D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{993B65BA-04E5-45D1-8248-B8FBA991491D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{C747520F-45A3-41F6-A222-4B746D36AAEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{C747520F-45A3-41F6-A222-4B746D36AAEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C747520F-45A3-41F6-A222-4B746D36AAEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C747520F-45A3-41F6-A222-4B746D36AAEF}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B20DC0DC-78DE-4988-B44C-FB2280C31F9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B20DC0DC-78DE-4988-B44C-FB2280C31F9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B20DC0DC-78DE-4988-B44C-FB2280C31F9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B20DC0DC-78DE-4988-B44C-FB2280C31F9A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B86A1F1D-7A57-419B-BD77-C1D2459C17F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B86A1F1D-7A57-419B-BD77-C1D2459C17F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B86A1F1D-7A57-419B-BD77-C1D2459C17F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B86A1F1D-7A57-419B-BD77-C1D2459C17F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{537894ED-8315-4571-AC0B-351C1F165F4E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{537894ED-8315-4571-AC0B-351C1F165F4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{537894ED-8315-4571-AC0B-351C1F165F4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{537894ED-8315-4571-AC0B-351C1F165F4E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
