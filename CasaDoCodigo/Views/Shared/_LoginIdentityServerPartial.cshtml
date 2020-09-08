@@ -1,0 +1,20 @@
+﻿@{
+    string nomeUsuario = "";
+}
+
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+
+@if (!string.IsNullOrWhiteSpace(nomeUsuario))
+{
+    <div>Olá, @nomeUsuario <a> Sair</a></div>
+}
+else
+{
+    <div>
+        <a>Entrar</a>
+    </div>
+}
+
