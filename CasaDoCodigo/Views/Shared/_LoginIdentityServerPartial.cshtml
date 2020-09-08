@@ -1,5 +1,5 @@
 ﻿@{
-    string nomeUsuario = "as";
+    string nomeUsuario = User.FindFirst("name")?.Value; //?. serve para não gerar excessão caso sej retornado um valor nulo
     var Claims = User.Claims.ToList();
 }
 
