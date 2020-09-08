@@ -1,5 +1,6 @@
 ﻿@{
-    string nomeUsuario = "";
+    string nomeUsuario = "as";
+    var Claims = User.Claims.ToList();
 }
 
 @*
@@ -9,12 +10,18 @@
 
 @if (!string.IsNullOrWhiteSpace(nomeUsuario))
 {
-    <div>Olá, @nomeUsuario <a> Sair</a></div>
+    <ul class="nav navbar-nav navbar-right">
+        <li>
+            <a>Olá, @nomeUsuario!</a>
+        </li>
+        <li>
+            <a>Sair</a>
+        </li>
+    </ul>
 }
 else
 {
-    <div>
-        <a>Entrar</a>
-    </div>
+    <ul class="nav navbar-nav navbar-right">
+        <li><a>Entrar</a></li>
+    </ul>
 }
-

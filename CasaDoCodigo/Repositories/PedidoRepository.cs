@@ -93,7 +93,10 @@ namespace CasaDoCodigo.Repositories
             if (pedido == null)
             {
                 var claimsPrincipal = contextAccessor.HttpContext.User;
-                var clienteId = userManager.GetUserId(claimsPrincipal);
+                //var clienteId = userManager.GetUserId(claimsPrincipal);
+                var clienteId = claimsPrincipal.FindFirst("sub")?.Value;
+                //subject ou Id do usuário
+                // ?. lança uma excessão se o valor for nulo
                 pedido = new Pedido(clienteId);
                 await dbSet.AddAsync(pedido);
                 await contexto.SaveChangesAsync();
