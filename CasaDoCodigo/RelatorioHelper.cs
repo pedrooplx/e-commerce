@@ -1,7 +1,9 @@
 ﻿using CasaDoCodigo.Models;
+using IdentityModel.Client;
 using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json;
 using System;
+using System.Diagnostics;
 using System.Linq;
 using System.Net.Http;
 using System.Text;
@@ -41,24 +43,49 @@ namespace CasaDoCodigo
 
             //using (HttpClient httpClient = HttpClientFactory.Create())
             //{
-                //o texto do conteúdo (JSON)
-                var json = JsonConvert.SerializeObject(linhaRelatorio);
-                //o objeto HttpContent que empacota o texto (application/json)
-                HttpContent httpContent = new StringContent(json, Encoding.UTF8, "application/json");
-                //URI = identificador universal de recurso
+            //o texto do conteúdo (JSON)
+            var json = JsonConvert.SerializeObject(linhaRelatorio);
+            //o objeto HttpContent que empacota o texto (application/json)
+            HttpContent httpContent = new StringContent(json, Encoding.UTF8, "application/json");
+            //URI = identificador universal de recurso
 
-                //endereço base: http://localhost:5002
-                //endereço relativo: api/relatorio
+            //endereço base: http://localhost:5002
+            //endereço relativo: api/relatorio
 
-                Uri baseUri = new Uri(configuration["RelatorioWebAPIURL"]);
-                Uri uri = new Uri(baseUri, RelativeUri);
-                HttpResponseMessage httpResponseMessage =
-                    await httpClient.PostAsync(uri, httpContent);
+            //Descobrir o endereço (endpoint) do token de acesso para autorizar o metodo post e trazer o documento
+            var discoveryResponse = await httpClient.GetDiscoveryDocumentAsync(configuration["CasaDoCodigoIdentityServerUrl"]);
 
-                if (!httpResponseMessage.IsSuccessStatusCode)
+            if (discoveryResponse.IsError)
+            {
+                throw new ApplicationException(discoveryResponse.Error);
+            }
+
+            //Obtendo token de acesso
+            var tokenResponse = await httpClient.RequestClientCredentialsTokenAsync(
+                new ClientCredentialsTokenRequest
                 {
-                    throw new ApplicationException(httpResponseMessage.ReasonPhrase);
+                    Address = discoveryResponse.TokenEndpoint,
+                    ClientId = "CasaDoCodigo.MVC", //Está no IdentityServer config.cs
+                    ClientSecret = "49C1A7E1-0C79-4A89-A3D6-A37998FB86B0", //Está no IdentityServer config.cs
+                    Scope = "CasaDoCodigo.Relatorio" //O que estamos tentando acessar
                 }
+            );
+
+            if (tokenResponse.IsError)
+            {
+                Debug.WriteLine(tokenResponse.Error);
+                return;
+            }
+
+            Uri baseUri = new Uri(configuration["RelatorioWebAPIURL"]);
+            Uri uri = new Uri(baseUri, RelativeUri);
+
+            HttpResponseMessage httpResponseMessage = await httpClient.PostAsync(uri, httpContent);
+
+            if (!httpResponseMessage.IsSuccessStatusCode)
+            {
+                throw new ApplicationException(httpResponseMessage.ReasonPhrase);
+            }
             //}
         }
 

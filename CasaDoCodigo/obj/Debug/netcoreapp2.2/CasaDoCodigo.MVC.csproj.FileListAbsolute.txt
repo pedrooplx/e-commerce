@@ -63,7 +63,6 @@ D:\Documentos\GitHub\E-Commerce\CasaDoCodigo\bin\Debug\netcoreapp2.2\CasaDoCodig
 D:\Documentos\GitHub\E-Commerce\CasaDoCodigo\obj\Debug\netcoreapp2.2\CasaDoCodigo.MVC.csprojAssemblyReference.cache
 D:\Documentos\GitHub\E-Commerce\CasaDoCodigo\obj\Debug\netcoreapp2.2\CasaDoCodigo.MVC.AssemblyInfoInputs.cache
 D:\Documentos\GitHub\E-Commerce\CasaDoCodigo\obj\Debug\netcoreapp2.2\CasaDoCodigo.MVC.AssemblyInfo.cs
-D:\Documentos\GitHub\E-Commerce\CasaDoCodigo\obj\Debug\netcoreapp2.2\CasaDoCodigo.MVC.csproj.CoreCompileInputs.cache
 D:\Documentos\GitHub\E-Commerce\CasaDoCodigo\obj\Debug\netcoreapp2.2\CasaDoCodigo.MVC.RazorAssemblyInfo.cache
 D:\Documentos\GitHub\E-Commerce\CasaDoCodigo\obj\Debug\netcoreapp2.2\CasaDoCodigo.MVC.RazorAssemblyInfo.cs
 D:\Documentos\GitHub\E-Commerce\CasaDoCodigo\obj\Debug\netcoreapp2.2\CasaDoCodigo.MVC.TagHelpers.input.cache
