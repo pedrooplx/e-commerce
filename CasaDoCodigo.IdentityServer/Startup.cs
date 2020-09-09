@@ -56,7 +56,7 @@ namespace CasaDoCodigo.IdentityServer
 
             if (Environment.IsDevelopment())
             {
-                builder.AddDeveloperSigningCredential();
+                builder.AddDeveloperSigningCredential(); //tempkey.rsa - chave de desenvolvedor
             }
             else
             {
