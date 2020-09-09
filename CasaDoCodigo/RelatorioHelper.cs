@@ -77,6 +77,8 @@ namespace CasaDoCodigo
                 return;
             }
 
+            httpClient.SetBearerToken(tokenResponse.AccessToken);
+
             Uri baseUri = new Uri(configuration["RelatorioWebAPIURL"]);
             Uri uri = new Uri(baseUri, RelativeUri);
 

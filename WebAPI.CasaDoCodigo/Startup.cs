@@ -46,6 +46,8 @@ namespace WebAPI.CasaDoCodigo
                 app.UseDeveloperExceptionPage();
             }
 
+            app.UseAuthentication();
+
             app.UseRouting();
 
             app.UseAuthorization();
