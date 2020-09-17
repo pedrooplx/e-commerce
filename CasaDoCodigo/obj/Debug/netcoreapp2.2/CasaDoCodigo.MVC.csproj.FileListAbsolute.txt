@@ -98,4 +98,3 @@ D:\Documentos\GitHub\E-Commerce\CasaDoCodigo\obj\Debug\netcoreapp2.2\CasaDoCodig
 D:\Documentos\GitHub\E-Commerce\CasaDoCodigo\obj\Debug\netcoreapp2.2\CasaDoCodigo.MVC.genruntimeconfig.cache
 D:\Documentos\GitHub\E-Commerce\CasaDoCodigo\obj\Debug\netcoreapp2.2\CasaDoCodigo.MVC.csproj.CopyComplete
 D:\Documentos\GitHub\E-Commerce\CasaDoCodigo\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_LoginIdentityServerPartial.cshtml.g.cs
-D:\Documentos\GitHub\E-Commerce\CasaDoCodigo\obj\Debug\netcoreapp2.2\CasaDoCodigo.MVC.csproj.CoreCompileInputs.cache
