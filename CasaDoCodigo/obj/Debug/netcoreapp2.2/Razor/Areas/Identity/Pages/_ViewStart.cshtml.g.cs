@@ -13,6 +13,21 @@ namespace CasaDoCodigo.Areas.Identity.Pages
     using Microsoft.AspNetCore.Mvc;
     using Microsoft.AspNetCore.Mvc.Rendering;
     using Microsoft.AspNetCore.Mvc.ViewFeatures;
+#line 1 "D:\Documentos\GitHub\E-Commerce\CasaDoCodigo\Areas\_ViewImports.cshtml"
+using CasaDoCodigo;
+
+#line default
+#line hidden
+#line 2 "D:\Documentos\GitHub\E-Commerce\CasaDoCodigo\Areas\_ViewImports.cshtml"
+using CasaDoCodigo.Models;
+
+#line default
+#line hidden
+#line 3 "D:\Documentos\GitHub\E-Commerce\CasaDoCodigo\Areas\_ViewImports.cshtml"
+using CasaDoCodigo.Models.ViewModels;
+
+#line default
+#line hidden
 #line 1 "D:\Documentos\GitHub\E-Commerce\CasaDoCodigo\Areas\Identity\Pages\_ViewImports.cshtml"
 using Microsoft.AspNetCore.Identity;
 
@@ -29,6 +44,7 @@ using CasaDoCodigo.Areas.Identity.Data;
 #line default
 #line hidden
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"362a7083a3da9266de5cafb8828a5cdcba70c3ca", @"/Areas/Identity/Pages/_ViewStart.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"5764b985c14b19f76680672d581de467d30433a1", @"/Areas/_ViewImports.cshtml")]
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"537b74a39bc62ddcec1164e58ca7371f51cbe743", @"/Areas/Identity/Pages/_ViewImports.cshtml")]
     public class Areas_Identity_Pages__ViewStart : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {

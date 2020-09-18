@@ -36,10 +36,6 @@ namespace CasaDoCodigo.Controllers
         //MELHORIA: 2) Nova view de Busca de Produtos
         //Para saber mais: Formação .NET
         //https://cursos.alura.com.br/formacao-dotnet
-        public async Task<IActionResult> BuscaProdutos(string pesquisa)
-        {
-            return View(await produtoRepository.GetProdutosAsync(pesquisa));
-        }
 
         [Authorize]
         public async Task<IActionResult> Carrinho(string codigo)

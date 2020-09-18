@@ -78,7 +78,6 @@ D:\Documentos\GitHub\E-Commerce\CasaDoCodigo\obj\Debug\netcoreapp2.2\Razor\Areas
 D:\Documentos\GitHub\E-Commerce\CasaDoCodigo\obj\Debug\netcoreapp2.2\Razor\Areas\Identity\Pages\_ValidationScriptsPartial.cshtml.g.cs
 D:\Documentos\GitHub\E-Commerce\CasaDoCodigo\obj\Debug\netcoreapp2.2\Razor\Areas\Identity\Pages\_ViewImports.cshtml.g.cs
 D:\Documentos\GitHub\E-Commerce\CasaDoCodigo\obj\Debug\netcoreapp2.2\Razor\Areas\Identity\Pages\_ViewStart.cshtml.g.cs
-D:\Documentos\GitHub\E-Commerce\CasaDoCodigo\obj\Debug\netcoreapp2.2\Razor\Views\Pedido\BuscaProdutos.cshtml.g.cs
 D:\Documentos\GitHub\E-Commerce\CasaDoCodigo\obj\Debug\netcoreapp2.2\Razor\Views\Pedido\Cadastro.cshtml.g.cs
 D:\Documentos\GitHub\E-Commerce\CasaDoCodigo\obj\Debug\netcoreapp2.2\Razor\Views\Pedido\Carrinho.cshtml.g.cs
 D:\Documentos\GitHub\E-Commerce\CasaDoCodigo\obj\Debug\netcoreapp2.2\Razor\Views\Pedido\Carrossel.cshtml.g.cs
@@ -98,3 +97,7 @@ D:\Documentos\GitHub\E-Commerce\CasaDoCodigo\obj\Debug\netcoreapp2.2\CasaDoCodig
 D:\Documentos\GitHub\E-Commerce\CasaDoCodigo\obj\Debug\netcoreapp2.2\CasaDoCodigo.MVC.genruntimeconfig.cache
 D:\Documentos\GitHub\E-Commerce\CasaDoCodigo\obj\Debug\netcoreapp2.2\CasaDoCodigo.MVC.csproj.CopyComplete
 D:\Documentos\GitHub\E-Commerce\CasaDoCodigo\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_LoginIdentityServerPartial.cshtml.g.cs
+D:\Documentos\GitHub\E-Commerce\CasaDoCodigo\obj\Debug\netcoreapp2.2\CasaDoCodigo.MVC.csproj.CoreCompileInputs.cache
+D:\Documentos\GitHub\E-Commerce\CasaDoCodigo\obj\Debug\netcoreapp2.2\Razor\Areas\Catalogo\Views\Home\Index.cshtml.g.cs
+D:\Documentos\GitHub\E-Commerce\CasaDoCodigo\obj\Debug\netcoreapp2.2\Razor\Areas\_ViewImports.cshtml.g.cs
+D:\Documentos\GitHub\E-Commerce\CasaDoCodigo\obj\Debug\netcoreapp2.2\Razor\Areas\_ViewStart.cshtml.g.cs
