@@ -101,3 +101,4 @@ D:\Documentos\GitHub\E-Commerce\CasaDoCodigo\obj\Debug\netcoreapp2.2\CasaDoCodig
 D:\Documentos\GitHub\E-Commerce\CasaDoCodigo\obj\Debug\netcoreapp2.2\Razor\Areas\Catalogo\Views\Home\Index.cshtml.g.cs
 D:\Documentos\GitHub\E-Commerce\CasaDoCodigo\obj\Debug\netcoreapp2.2\Razor\Areas\_ViewImports.cshtml.g.cs
 D:\Documentos\GitHub\E-Commerce\CasaDoCodigo\obj\Debug\netcoreapp2.2\Razor\Areas\_ViewStart.cshtml.g.cs
+D:\Documentos\GitHub\E-Commerce\CasaDoCodigo\obj\Debug\netcoreapp2.2\Razor\Areas\Carrinho\Views\Home\_NavegacaoCarrinho.cshtml.g.cs
