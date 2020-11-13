@@ -46,8 +46,9 @@ O primeiro passo é ter o [Microsoft .Net Core SDK 2.2](https://dotnet.microsoft
 
 Após instalação do SDK, decida qual a versão deseja instalar, pois neste projeto temos a versão com Identitye Identity Server em arquitetura micro-services.
 
-→ Baixar versão com [Identity](https://github.com/pedrooplx/e-commerce/tree/a85c420dd43724bf626e5fc97dcc0f08ff500d9d)
-→ Baixar versão com [Identity Server 4 - Microservices](https://github.com/pedrooplx/e-commerce/tree/3295981d1ec062ff76314ab651c47d6a17a41299).
+- Clique [aqui](https://github.com/pedrooplx/e-commerce/tree/a85c420dd43724bf626e5fc97dcc0f08ff500d9d) para baixar versão com Identity.
+
+- Clique [aqui](https://github.com/pedrooplx/e-commerce/tree/3295981d1ec062ff76314ab651c47d6a17a41299) para baixar versão com Identity Server 4 - Microservices.
 
 Após o download, abra o arquivo .sln no Visual Studio, [compile e limpe](https://docs.microsoft.com/pt-br/visualstudio/ide/building-and-cleaning-projects-and-solutions-in-visual-studio?view=vs-2019) a solução e em seguida, "F5" para rodar o projeto.
 
