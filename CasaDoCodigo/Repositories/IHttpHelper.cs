@@ -10,5 +10,7 @@ namespace CasaDoCodigo
         int? GetPedidoId();
         void SetPedidoId(int pedidoId);
         void ResetPedidoId();
+        void SetCadastro(Cadastro cadastro);
+        Cadastro GetCadastro();
     }
 }

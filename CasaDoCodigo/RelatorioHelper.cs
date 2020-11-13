@@ -1,9 +1,7 @@
 ﻿using CasaDoCodigo.Models;
-using IdentityModel.Client;
 using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json;
 using System;
-using System.Diagnostics;
 using System.Linq;
 using System.Net.Http;
 using System.Text;
@@ -18,16 +16,11 @@ namespace CasaDoCodigo
 
     public class RelatorioHelper : IRelatorioHelper
     {
-        private const string RelativeUri = "api/relatorio";
-        private readonly IConfiguration configuration;
-
-        //PROBLEMA: NÃO DETECTA MUDANÇAS NO DNS
-        //private static HttpClient httpClient;
-
+        private const string relativeUri = "api/relatorio";
         private readonly HttpClient httpClient;
 
-        public RelatorioHelper(IConfiguration configuration,
-            HttpClient httpClient)
+        public IConfiguration configuration { get; }
+        public RelatorioHelper(IConfiguration configuration, HttpClient httpClient)
         {
             this.configuration = configuration;
             this.httpClient = httpClient;
@@ -37,58 +30,24 @@ namespace CasaDoCodigo
         {
             string linhaRelatorio = await GetLinhaRelatorio(pedido);
 
-            //PROBLEMA: EXAUSTÃO DE SOCKET
-            //using (HttpClient httpClient = new HttpClient())
-
-
-            //using (HttpClient httpClient = HttpClientFactory.Create())
-            //{
-            //o texto do conteúdo (JSON)
+            // o texto do conteúdo (JSON)
             var json = JsonConvert.SerializeObject(linhaRelatorio);
-            //o objeto HttpContent que empacota o texto (application/json)
+            // o objeto que "empacota" o texto (application/json)
             HttpContent httpContent = new StringContent(json, Encoding.UTF8, "application/json");
-            //URI = identificador universal de recurso
+            //URI - Identificador universal de recurso
 
-            //endereço base: http://localhost:5002
-            //endereço relativo: api/relatorio
+            //Endereço base: http://localhost:5002/
+            //Endereço relativo: api/relatorio
 
-            //Descobrir o endereço (endpoint) do token de acesso para autorizar o metodo post e trazer o documento
-            var discoveryResponse = await httpClient.GetDiscoveryDocumentAsync(configuration["CasaDoCodigoIdentityServerUrl"]);
+            Uri baseUri = new Uri(configuration["RelatorioWebAPIURL"]); //Pegando dados de appsettings.json
 
-            if (discoveryResponse.IsError)
+            Uri uri = new Uri(baseUri, relativeUri);
+            HttpResponseMessage responseMessage = await httpClient.PostAsync(uri, httpContent);
+
+            if (!responseMessage.IsSuccessStatusCode)
             {
-                throw new ApplicationException(discoveryResponse.Error);
+                throw new ApplicationException(responseMessage.ReasonPhrase);
             }
-
-            //Obtendo token de acesso
-            var tokenResponse = await httpClient.RequestClientCredentialsTokenAsync(
-                new ClientCredentialsTokenRequest
-                {
-                    Address = discoveryResponse.TokenEndpoint,
-                    ClientId = "CasaDoCodigo.MVC", //Está no IdentityServer config.cs
-                    ClientSecret = "49C1A7E1-0C79-4A89-A3D6-A37998FB86B0", //Está no IdentityServer config.cs
-                    Scope = "CasaDoCodigo.Relatorio" //O que estamos tentando acessar
-                }
-            );
-
-            if (tokenResponse.IsError)
-            {
-                Debug.WriteLine(tokenResponse.Error);
-                return;
-            }
-
-            httpClient.SetBearerToken(tokenResponse.AccessToken);
-
-            Uri baseUri = new Uri(configuration["RelatorioWebAPIURL"]);
-            Uri uri = new Uri(baseUri, RelativeUri);
-
-            HttpResponseMessage httpResponseMessage = await httpClient.PostAsync(uri, httpContent);
-
-            if (!httpResponseMessage.IsSuccessStatusCode)
-            {
-                throw new ApplicationException(httpResponseMessage.ReasonPhrase);
-            }
-            //}
         }
 
         private async Task<string> GetLinhaRelatorio(Pedido pedido)

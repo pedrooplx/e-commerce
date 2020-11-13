@@ -26,11 +26,10 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a asp-area="Catalogo" class="navbar-brand"></a>
+                <a asp-area="" asp-controller="Pedido" asp-action="BuscaProdutos" class="navbar-brand"></a>
             </div>
             <div class="navbar-collapse collapse">
-                <!--COMPONENTE DE LOGIN-->
-                <partial name="_LoginIdentityServerPartial" />
+                <partial name="_loginPartial" />
             </div>
         </div>
     </nav>

@@ -9,7 +9,6 @@ using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.Extensions.Logging;
 using Serilog;
 using System;
-using System.IdentityModel.Tokens.Jwt;
 
 namespace CasaDoCodigo
 {
@@ -80,62 +79,26 @@ namespace CasaDoCodigo
             services.AddTransient<ICadastroRepository, CadastroRepository>();
             services.AddTransient<IRelatorioHelper, RelatorioHelper>();
 
-            //TAREFA: Permitir login externo 
-            //com a conta da Microsoft
-            //https://apps.dev.microsoft.com/
-
-            //TAREFA: Permitir login externo 
-            //com a conta do Google
-            //https://developers.google.com/identity/sign-in/web/sign-in
-
-
-            //HABILITE ESTAS LINHAS ABAIXO APENAS
-            //APÓS CONFIGURAR SUA APLICAÇÃO NA MICROSOFT E NO GOOGLE.
-
-            //services.AddAuthentication()
-            //    .AddMicrosoftAccount(options =>
-            //    {
-            //        options.ClientId = Configuration["ExternalLogin:Microsoft:ClientId"];
-            //        options.ClientSecret = Configuration["ExternalLogin:Microsoft:ClientSecret"];
-            //    })
-            //    .AddGoogle(options =>
-            //    {
-            //        options.ClientId = Configuration["ExternalLogin:Google:ClientId"];
-            //        options.ClientSecret = Configuration["ExternalLogin:Google:ClientSecret"];
-            //    });
-
-            JwtSecurityTokenHandler.DefaultInboundClaimTypeMap.Clear();
-
-            services.AddAuthentication(options =>
-            {
-                //forma de autenticação local do usuário
-                options.DefaultScheme = "Cookies";
-                //protocolo que define o fluxo de autenticação
-                options.DefaultChallengeScheme = "OpenIdConnect";
-            })
-            .AddCookie()
-            .AddOpenIdConnect(options =>
-            {
-                options.SignInScheme = "Cookies";
-                options.Authority = Configuration["CasaDoCodigoIdentityServerUrl"];
-                options.ClientId = "CasaDoCodigo.MVC";
-                options.ClientSecret = "49C1A7E1-0C79-4A89-A3D6-A37998FB86B0";
-                options.SaveTokens = true;
-                //1) autorização e 2) identidade do usuário
-                options.ResponseType = "code id_token";
-                //código de autorização + token de identidade
-                options.RequireHttpsMetadata = false;
-                options.GetClaimsFromUserInfoEndpoint = true;
-            });
+            //Para permitir o login externo com a conta da microfot
+            //Configurar: https://portal.azure.com/#blade/Microsoft_AAD_RegisteredApps/ApplicationsListBlade
+            //Configurando o Provedor Externo Microsoft pelo Azure: https://cursos.alura.com.br/course/aspnet-core-identity/task/57095
+            services.AddAuthentication()
+                .AddMicrosoftAccount(option =>
+                {
+                    option.ClientId = Configuration["ExternalLogin:Microsoft:ClienteId"];
+                    option.ClientSecret = Configuration["ExternalLogin:Microsoft:ClientSecret"];
+                })
+                .AddGoogle(option => {
+                    option.ClientId = Configuration["ExternalLogin:Google:ClienteId"];
+                    option.ClientSecret = Configuration["ExternalLogin:Google:ClientSecret"];
+                });
 
             services.AddHttpClient<IRelatorioHelper, RelatorioHelper>();
         }
 
-
         // Este método é chamado pelo runtime.
         // Use este método para configurar o pipeline de requisições HTTP.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env,
-            IServiceProvider serviceProvider)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, IServiceProvider serviceProvider)
         {
             _loggerFactory.AddSerilog();
 
@@ -150,24 +113,21 @@ namespace CasaDoCodigo
             }
 
             app.UseStaticFiles();
-            app.UseAuthentication();
             //INTEGRACAO 1) adicionar componente Identity
-            //ASP.NET Core utiliza o padrão "Cadeia de Responsabilidade"
+            //ASP.NET Core utiliza o padrão "Cadeia de Responsabilidade (Chain of Responsibility)"
             //https://pt.wikipedia.org/wiki/Chain_of_Responsibility
-            /// <image url="pipeline4.png" scale="0.75"/>
+
+            app.UseAuthentication();
+
+            //O ASP.NET Core Identity é como se fosse um middleware - um componente intermedipario que vai entrar ni pipeline da aplicação
+            //um componente que vai tratar a requisição e direcionar essa requisição para o próximo componente do pipeline ou fazer algum desvio para solicitar login ou novo cadastro
+            
             app.UseSession();
             app.UseMvc(routes =>
             {
-                routes.MapAreaRoute(
-                    name: "AreaCatalogo",
-                    areaName: "Catalogo",
-                    template: "Catalogo/{controller=Home}/{action=Index}/{pesquisa?}"
-                );
-
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Home}/{action=Index}/{codigo?}"
-                );
+                    template: "{controller=Pedido}/{action=BuscaProdutos}/{codigo?}");
             });
 
             var dataService = serviceProvider.GetRequiredService<IDataService>();
